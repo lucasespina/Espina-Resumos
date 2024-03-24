@@ -571,11 +571,13 @@ O canal <strong>Value</strong> indica a luminosidade da cor.</p>
 <div class="highlight"><pre><span></span><code><span class="n">cv2</span><span class="o">.</span><span class="n">drawContours</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">contourssa</span><span class="p">,</span> <span class="n">indice</span><span class="p">,</span> <span class="n">cor</span><span class="p">)</span>
 </code></pre></div>
 <h1 id="_34"></h1>
-<p><strong>Onde</strong>:
-* <code>img</code> é a imagem colorida ou tons de cinza onde serão desenhados os contornos.
-* <code>contours</code> é a lista de contornos obtida com <code>cv2.findContours()</code>, ou seja, recebe uma lista de lista. Então assumindo que <code>contours[i]</code> seja um contorno, a função esperaria uma sintaxe como <code>cv2.drawContours(img, [contours[i]], indice, cor)</code>.
-* <code>indice</code> é o índice do contorno dentro da lista a ser desenhado; se <code>-1</code> desenha todos os contornos
-* <code>cor</code> é a cor do pixel a ser usada para desenhar o contorno, por exemplo, <code>(255, 0, 0)</code> para azul. Se for <code>-1</code>, o contorno é <strong>preenchido</strong> com a cor.</p>
+<p><strong>Onde</strong>:</p>
+<ul>
+<li><code>img</code>  é a imagem colorida ou tons de cinza onde serão desenhados os contornos.</li>
+<li><code>contours</code> é a lista de contornos obtida com <code>cv2.findContours()</code>, ou seja, recebe uma lista de lista. Então assumindo que <code>contours[i]</code> seja um contorno, a função esperaria uma sintaxe como <code>cv2.drawContours(img, [contours[i]], indice, cor)</code>.</li>
+<li><code>indice</code> é o índice do contorno dentro da lista a ser desenhado; se <code>-1</code> desenha todos os contornos</li>
+<li><code>cor</code> é a cor do pixel a ser usada para desenhar o contorno, por exemplo, <code>(255, 0, 0)</code> para azul. Se for <code>-1</code>, o contorno é <strong>preenchido</strong> com a cor.</li>
+</ul>
 <p><div class="highlight"><pre><span></span><code><span class="c1"># Lendo a imagem</span>
 <span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;path/exemplo.png&quot;</span><span class="p">)</span>
 
