@@ -541,34 +541,70 @@
             <section class="progress-section show">
 <h1 id="elesis">EleSis</h1>
 <hr />
-<h2 id="sumario">Sumario</h2>
+<h2 id="sumario">Sumário</h2>
 <ul>
-<li>Conteúdos:<ul>
-<li>Tabela Verdade</li>
-<li>Componentes Digitais</li>
-<li>Aritmética Binária - HW: Half-Adder/ Full-Adder/ Somadores</li>
-<li>ULA</li>
-<li>Lógica Sequencial</li>
-<li>VHDL: Combinacional</li>
-<li>VHDL: Sequencial</li>
-<li>RTL</li>
-<li>Formas de onda</li>
-<li>Arquivos de teste</li>
+<li><a href="#álgebra-booleana">Álgebra Booleana</a></li>
+<li><a href="#tabela-verdade">Tabela Verdade</a></li>
+<li><a href="#equações-booleanas-e-suas-operações">Equações booleanas e suas operações</a><ul>
+<li><a href="#not">Not</a></li>
+<li><a href="#and">And</a></li>
+<li><a href="#or">Or</a></li>
+<li><a href="#nand">Nand</a></li>
+</ul>
+</li>
+<li><a href="#teoria-componentes">Teoria Componentes</a><ul>
+<li><a href="#componentes-digitais">Componentes Digitais</a></li>
+<li><a href="#portas-lógicas">Portas Lógicas</a></li>
+<li><a href="#multiplexado-mux">Multiplexado(MUX)</a></li>
+<li><a href="#demultiplexador-demux">Demultiplexador(DEMUX)</a></li>
+</ul>
+</li>
+<li><a href="#enconders">Enconders</a><ul>
+<li><a href="#binary-coded-decimal-bcd">Binary-coded Decimal (BCD)</a></li>
+<li><a href="#gray-code">Gray Code</a></li>
+<li><a href="#comparador">Comparador</a></li>
+<li><a href="#somadores">Somadores</a></li>
+</ul>
+</li>
+<li><a href="#teoria-aritmética-binária">Teoria Aritmética Binária</a><ul>
+<li><a href="#half-adder-had">Half-Adder (HAD)</a></li>
+<li><a href="#full-adder-fad">Full-Adder (FAD)</a></li>
+<li><a href="#somador">Somador</a></li>
+</ul>
+</li>
+<li><a href="#teoria-lógica-sequencial">Teoria Lógica Sequencial</a><ul>
+<li><a href="#circuitos-biestáveis">Circuitos biestáveis</a></li>
+<li><a href="#clock">Clock</a></li>
+<li><a href="#flip-flop">Flip-Flop</a></li>
+<li><a href="#flip-flop-tipo-d">Flip-Flop tipo D</a></li>
+</ul>
+</li>
+<li><a href="#vhdl">VHDL</a><ul>
+<li><a href="#conceitos-básicos">Conceitos Básicos</a></li>
+<li><a href="#entity">Entity</a></li>
+<li><a href="#arquitetura-architecture">Arquitetura (architecture)</a></li>
+<li><a href="#vhdl-combinacional">VHDL: Combinacional</a></li>
+<li><a href="#vhdl-sequencial">VHDL: Sequencial</a></li>
+<li><a href="#rtl">RTL</a></li>
+<li><a href="#formas-de-onda">Formas de Onda</a></li>
+<li><a href="#arquivos-de-teste">Arquivos de Teste</a></li>
 </ul>
 </li>
 </ul>
+<hr />
 <h2 id="algebra-booleana">Algebra Booleana</h2>
 <p>Na álgebra booleana, as variáveis podem assumir apenas dois valores: 0 ou 1.</p>
+<h1 id="_1"></h1>
 <h3 id="tabela-verdade">Tabela Verdade</h3>
 <ul>
 <li>A tabela verdade é uma tabela que mostra todas as combinações possíveis de valores de entrada e a saída correspondente para uma equação booleana.</li>
 <li>A tabela verdade vai ter <span class="arithmatex">\(\mathbf{2^n}\)</span>
  linhas, onde <code>n</code> é o número de variáveis de entrada.</li>
 </ul>
-<h1 id="_1"></h1>
+<h1 id="_2"></h1>
 <h3 id="equacoes-booleanas-e-suas-operacoes">Equações booleanas e suas operações</h3>
 <p>As equações booleanas são expressões matemáticas que descrevem o comportamento de um circuito digital. Elas podem possuir uma ou mais entradas e apenas uma saída.</p>
-<h1 id="_2"></h1>
+<h1 id="_3"></h1>
 <ul>
 <li>
 <h4 id="not">Not</h4>
@@ -594,7 +630,7 @@
 </tbody>
 </table>
 <p><strong>Equação:</strong> <code>X =</code> <span class="arithmatex">\(\bar{A}\)</span></p>
-<h1 id="_3"></h1>
+<h1 id="_4"></h1>
 <ul>
 <li>
 <h4 id="and">AND</h4>
@@ -633,7 +669,7 @@
 </tbody>
 </table>
 <p><strong>Equação:</strong> <code>X</code> = <code>A</code> $\cdot$ <code>B</code></p>
-<h1 id="_4"></h1>
+<h1 id="_5"></h1>
 <ul>
 <li>
 <h4 id="or">OR</h4>
@@ -672,7 +708,7 @@
 </tbody>
 </table>
 <p><strong>Equação:</strong> <code>X = A + B</code></p>
-<h1 id="_5"></h1>
+<h1 id="_6"></h1>
 <ul>
 <li>
 <h4 id="nand">NAND</h4>
@@ -711,11 +747,11 @@
 </tbody>
 </table>
 <p><strong>Equação:</strong> <code>X =</code> <span class="arithmatex">\(\overline{A \cdot B}\)</span></p>
-<h1 id="_6"></h1>
+<h1 id="_7"></h1>
 <h2 id="teoria-componentes">Teoria Componentes</h2>
 <h3 id="componentes-digitais">Componentes Digitais</h3>
 <p>Os componentes digitais são os blocos de construção básicos de circuitos digitais. Eles são usados para realizar operações lógicas e aritméticas.</p>
-<h1 id="_7"></h1>
+<h1 id="_8"></h1>
 <ul>
 <li>
 <h4 id="portas-logicas">Portas Lógicas</h4>
@@ -727,7 +763,7 @@
 <span class="n">S</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="p">(</span><span class="k">not</span><span class="w"> </span><span class="n">A</span><span class="p">);</span>
 </code></pre></div></li>
 </ul>
-<h1 id="_8"></h1>
+<h1 id="_9"></h1>
 <ul>
 <li>
 <h4 id="multiplexadomux">Multiplexado(MUX)</h4>
@@ -742,7 +778,7 @@ As entradas <code>n</code> e a saída <code>q</code> podem ser binárias ou veto
 <span class="w">    </span><span class="n">o</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">);</span>
 <span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
 </code></pre></div>
-<h1 id="_9"></h1>
+<h1 id="_10"></h1>
 <p><strong>Tabela Verdade do MUX de 2 entradas</strong></p>
 <table>
 <thead>
@@ -818,7 +854,7 @@ As entradas <code>n</code> e a saída <code>q</code> podem ser binárias ou veto
 </table>
 <p><code>Tamanho do seletor</code> = $ \log_2(\text{size}(n))$</p>
 </div>
-<h1 id="_10"></h1>
+<h1 id="_11"></h1>
 <ul>
 <li>
 <h4 id="demultiplexadordemux">Demultiplexador(DEMUX)</h4>
@@ -834,7 +870,7 @@ As entradas <code>n</code> e a saída <code>q</code> podem ser binárias ou veto
 <span class="p">);</span>
 <span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
 </code></pre></div>
-<h1 id="_11"></h1>
+<h1 id="_12"></h1>
 <p><strong>Tabela Verdade do DEMUX de 2 saídas</strong></p>
 <table>
 <thead>
@@ -950,7 +986,7 @@ As entradas <code>n</code> e a saída <code>q</code> podem ser binárias ou veto
 <p class="admonition-title">Diagrama</p>
 <p><img alt="" src="../Imgs/bcd.png" /></p>
 </div>
-<h1 id="_12"></h1>
+<h1 id="_13"></h1>
 <div class="highlight"><pre><span></span><code><span class="k">entity</span><span class="w"> </span><span class="nc">binaryToBCD</span><span class="w"> </span><span class="k">is</span>
 <span class="k">port</span><span class="p">(</span>
 <span class="w">        </span><span class="n">x</span><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
@@ -959,7 +995,7 @@ As entradas <code>n</code> e a saída <code>q</code> podem ser binárias ou veto
 <span class="p">);</span>
 <span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
 </code></pre></div>
-<h1 id="_13"></h1>
+<h1 id="_14"></h1>
 <p><strong>Observação:</strong> O maior valor que um bloco de 4 bits do BCD assume é o 1001 que é referente ao número inteiro 9.</p>
 <ul>
 <li>
@@ -1111,7 +1147,7 @@ As entradas <code>n</code> e a saída <code>q</code> podem ser binárias ou veto
 <p class="admonition-title">Diagama</p>
 <p><img alt="" src="../Imgs/comparador.png" /></p>
 </div>
-<h1 id="_14"></h1>
+<h1 id="_15"></h1>
 <div class="highlight"><pre><span></span><code><span class="k">entity</span><span class="w"> </span><span class="nc">COMPARADOR</span><span class="w"> </span><span class="k">is</span>
 <span class="k">port</span><span class="p">(</span>
 <span class="w">        </span><span class="n">x</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
@@ -1181,7 +1217,11 @@ As entradas <code>n</code> e a saída <code>q</code> podem ser binárias ou veto
 <span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
 </code></pre></div>
 <h2 id="teoria-aritmetica-binaria">Teoria Aritmética Binária</h2>
+<ul>
+<li>
 <h3 id="half-adder-had">Half-Adder (HAD)</h3>
+</li>
+</ul>
 <p><strong>Half-Adder (HAD</strong>) é um circuito digital capaz de somar dois bits (<code>a</code> e <code>b</code>), tem como resultado o valor da <code>soma</code> e do <code>carry</code>, como ilustrado a seguir:</p>
 <p><strong>Tabela Verdade do Half-Adder</strong></p>
 <table>
@@ -1225,9 +1265,13 @@ As entradas <code>n</code> e a saída <code>q</code> podem ser binárias ou veto
 <p><img alt="" src="../Imgs/HAD.png" /></p>
 </div>
 <p>E é implementado em hardware da seguinte maneira:</p>
-<h1 id="_15"></h1>
+<h1 id="_16"></h1>
 <p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Half_Adder.svg/440px-Half_Adder.svg.png" /></p>
+<ul>
+<li>
 <h3 id="full-adder-fad">Full-Adder (FAD)</h3>
+</li>
+</ul>
 <p><strong>Full-Adder (FAD)</strong> é um componente digital capaz de somar três bits (<code>a</code>, <code>b</code> e <code>c</code>), tem como resultado o valor da <code>soma</code> e do <code>carry</code>.</p>
 <p><strong>Tabela Verdade do Full-Adder</strong></p>
 <table>
@@ -1303,20 +1347,24 @@ As entradas <code>n</code> e a saída <code>q</code> podem ser binárias ou veto
 <p class="admonition-title">Diagrama</p>
 <p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/1-bit_full-adder.svg/440px-1-bit_full-adder.svg.png" /></p>
 </div>
-<h1 id="_16"></h1>
+<h1 id="_17"></h1>
 <p>E é implementado em hardware da seguinte maneira:</p>
 <div class="highlight"><pre><span></span><code>![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Full-adder_logic_diagram.svg/440px-Full-adder_logic_diagram.svg.png)
 </code></pre></div>
+<ul>
+<li>
 <h3 id="somador">Somador</h3>
+</li>
+</ul>
 <p>Utilizando o <strong>FAD</strong> somos capazes de realizar um somador de dois vetores binários. Para isso, teremos que utilizar um full-adder para cada bit desse nosso vetor.</p>
 <p>Por exemplo: se formos criar um Somador capaz de somar dois vetores de 4bits, necessitamos utilizar 4 FAD para isso com a ligação descrita a seguir:</p>
 <p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/4-bit_ripple_carry_adder.svg/2560px-4-bit_ripple_carry_adder.svg.png" /></p>
 <p>Nesse diagrama, estamos realizando a soma ente os vetores <code>A(3 downto 0)</code> e <code>B(3 downto 0)</code>que resulta em um outro vetor <code>S(3 downto 0)</code> e um carry <code>C4</code>.</p>
-<h3 id="teoria-logica-sequencial">Teoria Lógica Sequencial</h3>
+<h2 id="teoria-logica-sequencial">Teoria Lógica Sequencial</h2>
 <p>Na lógica sequencial, o estado anterior das entradas influencia na saída, ou seja, essa lógica possui uma memória.</p>
 <p><img alt="" src="https://insper.github.io/Z01.1/commum-content/teoria/figs/LogicaSequencial-visaoGeral.png" /></p>
 <p>Sistemas sequências são em sua grande maioria combinados com sistema síncrono, onde todos o circuito digital opera em um determinado ritmo, esse sinal é conhecido como clock do sistema.</p>
-<h4 id="circuitos-biestaveis">Circuitos biestáveis</h4>
+<h3 id="circuitos-biestaveis">Circuitos biestáveis</h3>
 <p>Os circuitos biestáveis permancem em um dos dois estados binário (<code>0</code> ou <code>1</code>) enquanto estiver energizado. Eles são usados para armazenar e recuperar os estados dos bits dos computadores.</p>
 <ul>
 <li>
@@ -1407,11 +1455,7 @@ O latch SR é um circuito biestável composto de duas portas NOR que armazenam u
 </tr>
 </tbody>
 </table>
-<ul>
-<li>
-<h4 id="clock">Clock</h4>
-</li>
-</ul>
+<h3 id="clock">Clock</h3>
 <p>O clock é um sinal elétrico periódico utilizado para sincronizar sistemas digitais, utilizado em todo circuito síncrono, serve como o 'baterista' da banda, dando o ritmo de execução para a eletrônica. A cada novo clock (instante que ocorre uma mudança no sinal <code>0 -&gt; 1</code>), o sistema começa uma nova operação. O sinal do clock é geralmente periódico e de modulação 50% (50% em alto e 50% em baixo):</p>
 <p><img alt="" src="https://insper.github.io/Z01.1/commum-content/teoria/figs/Logica-Sequencial-clock.svg" /></p>
 <ul>
@@ -1442,10 +1486,14 @@ double data rate (DDR): Uma nova mudança a cada borda, subida e descida. (Dai q
 </ul>
 <h3 id="flip-flop">Flip-Flop</h3>
 <p>Flip-Flop (FF) é um circuito similar ao LATCH porém síncrono, ou seja, a mudança na saída (Q) só ocorre na borda do clock.</p>
+<ul>
+<li>
 <h4 id="flip-flop-tipo-d">Flip-Flop tipo D:</h4>
 <p>O Flip-Flop tipo D possui as seguintes portas:</p>
-<ul>
-<li><code>D:</code> entrada do de Dado</li>
+</li>
+<li>
+<p><code>D:</code> entrada do de Dado</p>
+</li>
 <li><code>Q:</code> saída do dado copiado</li>
 <li><span class="arithmatex">\(\overline{Q}:\)</span> saída do dado copiado negado</li>
 <li><code>CLK:</code> entrada do clock </li>
@@ -1453,13 +1501,38 @@ double data rate (DDR): Uma nova mudança a cada borda, subida e descida. (Dai q
 <p><img alt="" src="https://insper.github.io/Z01.1/commum-content/teoria/figs/Logica-Sequencial-FF-D.svg" /></p>
 <p>Toda vez que o ocorre uma borda de subina no clock, o sinal que está na entrada D é copiado para a saída Q, conforme diagrama a seguir:</p>
 <p><img alt="" src="https://insper.github.io/Z01.1/commum-content/teoria/figs/Logica-Sequencial-FF-D-time.svg" /></p>
-<p><strong>Tabela Verdade do Flip-Flop D:</strong>
-| D (in) | CLK (in) | Q (out) |
-|:------:|:--------:|:-------:|
-|    0   |    0     |    Q*    |
-|    1   |    1     |    Q*    |
-|    0   |    ^     |    0     |
-|    1   |    ^     |    1     |</p>
+<p><strong>Tabela Verdade do Flip-Flop D:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">D (in)</th>
+<th style="text-align: center;">CLK (in)</th>
+<th style="text-align: center;">Q (out)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">Q*</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">Q*</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">^</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">^</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li>
 <p><strong>Observação:</strong></p>
@@ -1521,6 +1594,296 @@ double data rate (DDR): Uma nova mudança a cada borda, subida e descida. (Dai q
 </tbody>
 </table>
 <h2 id="vhdl">VHDL</h2>
+<p>VHDL é uma linguagem de descrição de hardware, utilizada para descrever circuitos digitais.</p>
+<h3 id="conceitos-basicos">Conceitos Básicos</h3>
+<p>Um código em VHDL possui basicamente três partes:</p>
+<ul>
+<li><strong>Libraries:</strong> Bibliotecas que contém os componentes que serão utilizados no código.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">library</span><span class="w"> </span><span class="nn">ieee</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="nn">ieee.std_logic_1164.</span><span class="k">all</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="nn">ieee.numeric_std.</span><span class="k">all</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="nn">work.</span><span class="k">all</span><span class="p">;</span>
+</code></pre></div>
+<h1 id="_18"></h1>
+<ul>
+<li><strong>Entity:</strong> </li>
+</ul>
+<p>Podemos pensar na entidade como o trecho de código que define o módulo como uma caixa preta, ela explicita quem são as entradas e quais são as saídas desse módulo. Assim como um CHIP, que possui pinos de entradas e pinos de saída.</p>
+<p><img alt="" src="https://insper.github.io/Z01.1/figs/VHDL/entidade-descricao.png" /></p>
+<p>Uma entidade pode ter nenhuma ou 'infinitas' portas, para adicionarmos uma porta nova a uma entidade, basta adicionarmos uma nova linha com as três propriedades:</p>
+<div class="highlight"><pre><span></span><code>NOME : DIREÇÃO TIPO; 
+</code></pre></div>
+<p><strong>Exemplo:</strong></p>
+<p>Adicionando uma entrada x</p>
+<div class="highlight"><pre><span></span><code><span class="k">entity</span><span class="w"> </span><span class="nc">TopLevel</span><span class="w"> </span><span class="k">is</span>
+<span class="w">  </span><span class="k">port</span><span class="p">(</span>
+<span class="w">        </span><span class="n">x</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Observação:</strong> O ; não deve aparecer na última porta!</p>
+<p><strong>DIREÇÃO:</strong> </p>
+<p>A direção <code>in, out</code> define se a informação irá <code>entrar</code> no módulo ou <code>sair</code> do módulo.</p>
+<p><strong>TIPO:</strong></p>
+<p>O tipo define se a porta será composta por um único bit <code>std_logic</code> ou por um vetor de bits <code>std_logic_vector(2 downto 0)</code> (vetor de 3 bits).</p>
+<div class="admonition note">
+<p class="admonition-title">Mais Exemplos</p>
+<ul>
+<li>Módulo com duas entradas binárias: <code>a, x</code> e uma saída <code>b</code></li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">entity</span><span class="w"> </span><span class="nc">Comp1</span><span class="w"> </span><span class="k">is</span>
+<span class="w">    </span><span class="k">port</span><span class="p">(</span>
+<span class="w">            </span><span class="n">a</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">            </span><span class="n">x</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">            </span><span class="n">b</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
+</code></pre></div>
+<img alt="" src="https://insper.github.io/Z01.1/figs/VHDL/VHDL-basico-exe1.svg" /></p>
+<ul>
+<li>Módulo chamado MUX que possui 4 entradas na forma de um vetor ( <code>I : in std_logic_vector(3 downto 0</code> )), um seletor de dois bits na forma de um vetor (S) e uma saída q na forma de um bit.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">entity</span><span class="w"> </span><span class="nc">MUX</span><span class="w"> </span><span class="k">is</span>
+<span class="w">    </span><span class="k">port</span><span class="p">(</span>
+<span class="w">            </span><span class="n">I</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">            </span><span class="n">S</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">            </span><span class="n">q</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
+</code></pre></div>
+<p><img alt="" src="https://insper.github.io/Z01.1/figs/VHDL/VHDL-basico-exe2.svg" /></p>
+<ul>
+<li>Entidade de uma ULA:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">entity</span><span class="w"> </span><span class="nc">ALU</span><span class="w"> </span><span class="k">is</span>
+<span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="p">(</span>
+<span class="w">            </span><span class="n">x</span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">STD_LOGIC_VECTOR</span><span class="p">(</span><span class="mi">15</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">-- entrada X de dados da ALU</span>
+<span class="w">            </span><span class="n">y</span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">STD_LOGIC_VECTOR</span><span class="p">(</span><span class="mi">15</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">-- entrada Y de dados da ALU</span>
+<span class="w">            </span><span class="n">zx</span><span class="o">:</span><span class="w">    </span><span class="k">in</span><span class="w"> </span><span class="kt">STD_LOGIC</span><span class="p">;</span><span class="w">                     </span><span class="c1">-- zera a entrada x</span>
+<span class="w">            </span><span class="n">nx</span><span class="o">:</span><span class="w">    </span><span class="k">in</span><span class="w"> </span><span class="kt">STD_LOGIC</span><span class="p">;</span><span class="w">                     </span><span class="c1">-- inverte a entrada x</span>
+<span class="w">            </span><span class="n">zy</span><span class="o">:</span><span class="w">    </span><span class="k">in</span><span class="w"> </span><span class="kt">STD_LOGIC</span><span class="p">;</span><span class="w">                     </span><span class="c1">-- zera a entrada y</span>
+<span class="w">            </span><span class="n">ny</span><span class="o">:</span><span class="w">    </span><span class="k">in</span><span class="w"> </span><span class="kt">STD_LOGIC</span><span class="p">;</span><span class="w">                     </span><span class="c1">-- inverte a entrada y</span>
+<span class="w">            </span><span class="n">f</span><span class="o">:</span><span class="w">     </span><span class="k">in</span><span class="w"> </span><span class="kt">STD_LOGIC</span><span class="p">;</span><span class="w">                     </span><span class="c1">-- se 0 calcula x &amp; y, senão x + y</span>
+<span class="w">            </span><span class="n">no</span><span class="o">:</span><span class="w">    </span><span class="k">in</span><span class="w"> </span><span class="kt">STD_LOGIC</span><span class="p">;</span><span class="w">                     </span><span class="c1">-- inverte o valor da saída</span>
+<span class="w">            </span><span class="n">zr</span><span class="o">:</span><span class="w">    </span><span class="k">out</span><span class="w"> </span><span class="kt">STD_LOGIC</span><span class="p">;</span><span class="w">                    </span><span class="c1">-- setado se saída igual a zero</span>
+<span class="w">            </span><span class="n">ng</span><span class="o">:</span><span class="w">    </span><span class="k">out</span><span class="w"> </span><span class="kt">STD_LOGIC</span><span class="p">;</span><span class="w">                    </span><span class="c1">-- setado se saída é negativa</span>
+<span class="w">            </span><span class="n">saida</span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">STD_LOGIC_VECTOR</span><span class="p">(</span><span class="mi">15</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="c1">-- saída de dados da ALU</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
+</code></pre></div>
+<p><img alt="" src="https://insper.github.io/Z01.1/figs/VHDL/VHDL-basico-exe3.png" /></p>
+</div>
+<h1 id="_19"></h1>
+<ul>
+<li><strong>Arquitetura (architecture)</strong></li>
+</ul>
+<p>A arquitetura (<code>architecture</code>) define a relação das entradas com as saídas da entidade. Nessa parte é onde será construída a lógica digital desse módulo. Pense que é na arquitetura onde transcrevemos uma equação lógica, ou onde descrevemos uma memória.</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">architecture</span><span class="w"> </span><span class="nc">rtl</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">TopLevel</span><span class="w"> </span><span class="k">is</span>
+
+<span class="c1">-- Aqui é declaro os possíveis:</span>
+<span class="c1">--   a) sinais internos de uma entidade</span>
+<span class="c1">--   b) outras entidades que essa entidade pode utilizar</span>
+
+<span class="k">begin</span>
+
+<span class="w">    </span><span class="c1">-- Aqui é onde a coisa acontece de verdade</span>
+<span class="w">    </span><span class="c1">-- onde é feita a descrição da lógica digital</span>
+<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+
+<span class="k">end</span><span class="w"> </span><span class="nc">rtl</span><span class="p">;</span>
+</code></pre></div>
+<strong>Operações Básicas:</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Suponha o uso da entidade a seguir para os exemplos seguintes</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">entity</span><span class="w"> </span><span class="nc">Foo</span><span class="w"> </span><span class="k">is</span>
+<span class="w">    </span><span class="k">port</span><span class="p">(</span>
+<span class="w">        </span><span class="n">x</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">y</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">q</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">p</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
+</code></pre></div>
+</div>
+<p>No VHDL usamos <code>&lt;=</code> para representar que alguma coisa (a esquerda da seta) recebe algum outro valor (a direita da seta). Exemplos:</p>
+<ol>
+<li>
+<p><code>q &lt;= x;</code></p>
+<ul>
+<li><code>q</code>recebe o valor de <code>x</code></li>
+<li>Na prática estamos conectando um fio de <code>x</code> que liga em <code>q</code></li>
+</ul>
+</li>
+<li>
+<p><code>q &lt;= '0';</code></p>
+<ul>
+<li><code>q</code> recebe o valor <code>0</code></li>
+<li>Na prática estamos conectando um fio que sai de <code>q</code> e liga no terra</li>
+</ul>
+</li>
+<li><code>q &lt;= '1';</code><ul>
+<li><code>q</code> recebe o valor <code>1</code></li>
+<li>Na prática estamos conectando um fio que sai de <code>q</code> e liga no VCC</li>
+</ul>
+</li>
+</ol>
+<p><strong>Observação:</strong>
+Note que aqui estamos usando aspas simples: <code>'0'</code> e <code>'1'</code>para indicar um número binário (<code>std_logic</code>). Aspas dupla "<code>0101</code>" em VHDL significa que estamos trabalhando com um vetor de números binários (<code>std_logic_vector</code>).</p>
+<p>Podemos utilizar portas lógicas nas operações, alguns operadores implementados pela linguagem, são: <code>not, and, or, nand, nor, xor, xnor</code>. O uso dos operadores é feito da seguinte maneira:</p>
+<ol>
+<li><code>q &lt;= not x;</code><ul>
+<li><code>q</code> recebe o valor de <code>x</code> <strong>negado</strong></li>
+</ul>
+</li>
+<li><code>q &lt;= x and y;</code><ul>
+<li><code>q</code> recebe o valor de <code>x</code> <strong>e</strong> <code>y</code></li>
+</ul>
+</li>
+<li><code>q &lt;= x xor y;</code><ul>
+<li><code>q</code> recebe o valor de <code>x</code> <strong>XOR</strong> <code>y</code></li>
+</ul>
+</li>
+</ol>
+<p><strong>Operações com vetores:</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Suponha o uso da entidade a seguir para os exemplos seguintes</p>
+<div class="highlight"><pre><span></span><code><span class="k">entity</span><span class="w"> </span><span class="nc">Bar</span><span class="w"> </span><span class="k">is</span>
+<span class="k">port</span><span class="p">(</span>
+<span class="w">        </span><span class="n">a</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">b</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">q</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">p</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
+</code></pre></div>
+</div>
+<p>Exemplo de operações com vetores:</p>
+<ol>
+<li>
+<p>`p &lt;= "100"</p>
+<ul>
+<li><code>p</code> recebe o valor em binário <code>100</code></li>
+</ul>
+</li>
+<li>
+<p>`p not "100"</p>
+<ul>
+<li><code>p</code> recebe o valor <code>100</code> ou seja <code>011</code></li>
+</ul>
+</li>
+<li>
+<p><code>p &lt;= b(2 downto 0);</code></p>
+<ul>
+<li><code>p</code> recebe os três primeiros bits de <code>b</code> </li>
+</ul>
+</li>
+<li>
+<p><code>p(0) &lt;= a;</code></p>
+<ul>
+<li>O primeiro bit (bit 0) de <code>p</code> recebe o valor de <code>a</code></li>
+</ul>
+</li>
+<li>
+<p><code>q &lt;= not b(1);</code></p>
+<ul>
+<li>A saida binária <code>q</code> recebe o valor do segundo bit (bit 1) de <code>b</code> negado</li>
+</ul>
+</li>
+</ol>
+<p><strong>Signal</strong></p>
+<p>Sinais são declarados entre a palavra reservada <code>architecture</code> e o <code>begin</code> e servem para facilitar/ possibilitar o desenvolvimento de um sistema digital, eles só são visíveis dentro de uma entidade e servem como 'fios' internos de um módulo</p>
+<p><img alt="" src="https://insper.github.io/Z01.1/figs/VHDL/VHDL-basico-signals.svg" /></p>
+<p><strong>Sinais</strong> são diferente de portas não possuem direção, e são declarados da seguinte maneira:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">signal</span><span class="w"> </span><span class="n">NAME</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">TYPE</span>
+</code></pre></div>
+<ul>
+<li><strong>TYPE</strong> pode ser <code>std_logic/ std_logic_vector</code>, entre outros.</li>
+</ul>
+<p><strong>Exemplo:</strong></p>
+<p><div class="highlight"><pre><span></span><code><span class="k">architecture</span><span class="w"> </span><span class="nc">rtl</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">TopLevel</span><span class="w"> </span><span class="k">is</span>
+
+<span class="c1">-- Declaração de sinais</span>
+<span class="k">signal</span><span class="w"> </span><span class="n">aux1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span><span class="w">                </span>
+<span class="k">signal</span><span class="w"> </span><span class="n">aux2</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+
+<span class="c1">-- inicio da implementação</span>
+<span class="k">begin</span>
+
+<span class="w">    </span><span class="c1">--------------------</span>
+<span class="w">    </span><span class="n">aux1</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="w">    </span><span class="n">q</span><span class="w">    </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">aux1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">p</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">aux1</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">--------------------</span>
+<span class="w">    </span><span class="n">aux2</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">b</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<span class="w">    </span><span class="n">p</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">aux2</span><span class="p">;</span>
+
+<span class="k">end</span><span class="w"> </span><span class="nc">rtl</span><span class="p">;</span>
+</code></pre></div>
+No exemplo anterior, criamos um sinal auxiliar chamado de <code>aux1</code> que recebe a entrada a negada, esse sinal é então atribuído a saída <code>q</code> e ao <code>bit 0</code> da saída <code>p</code>. Outro sinal <code>aux2</code>, vetor de 2 bits recebe os dois bits mais significativos da entrada <code>b</code> e então é atribuído a saída <code>p</code>, bits 2 e 1.</p>
+<h3 id="vhdl-combinacional">VHDL Combinacional</h3>
+<p>Em sistemas digitais, lógica combinacional é aquela que não depende do estado anterior (não possui memória), podemos classificar portas lógicas (and, or, nand ...), mux, demux, comparadores, full address e outros componentes como sendo do tipo combinacional.</p>
+<h1 id="_20"></h1>
+<ul>
+<li><strong>Equações</strong>
+Podemos escrever equações em VHDL utilizando os seguintes operadores: <code>not, and, or, nor, xor, xnor.</code> Como no exemplo a seguir:</li>
+</ul>
+<p>X = <span class="arithmatex">\((\overline{A} \cdot B) + C\)</span></p>
+<p>Transcrevemos para:
+<div class="highlight"><pre><span></span><code><span class="n">X</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="p">((</span><span class="k">not</span><span class="w"> </span><span class="n">A</span><span class="p">)</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">B</span><span class="p">)</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">C</span><span class="p">;</span>
+</code></pre></div></p>
+<h1 id="_21"></h1>
+<ul>
+<li><strong>Concatenate</strong>
+Em VHDL podemos concatenar bit para formar vetores, isso é feito da seguinte forma:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">signal</span><span class="w"> </span><span class="n">bit0</span><span class="p">,</span><span class="w"> </span><span class="n">bit1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="k">signal</span><span class="w"> </span><span class="n">vec</span><span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+
+<span class="k">begin</span>
+
+<span class="w">   </span><span class="n">vec</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">bit1</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">bit0</span><span class="p">;</span>
+
+<span class="k">end</span><span class="p">;</span>
+</code></pre></div>
+<p>No exemplo anterior, temos um vetor de 2 bits (<code>vec</code>) que é formado por: <code>[bit1, bit0]</code>.</p>
+<ul>
+<li><strong>With Select</strong></li>
+</ul>
+<p>O <code>with select</code> em VHDL é utilizado quando desejamos que um sinal (ou saída) receba diferentes valores com base em um sinal de seleção. No exemplo a seguir, o sinal <code>b</code> recebe o valor <code>1000</code> quando o sinal de seleção <code>a</code> for <code>00, 0100</code> quando a for <code>01</code>, ..., note que no último caso usamos o <code>others</code>, ele entrou no lugar do <code>11</code>.
+<div class="highlight"><pre><span></span><code><span class="k">signal</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span>
+<span class="k">signal</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">std_logic_Vector</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+
+<span class="k">begin</span>
+
+<span class="k">with</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">select</span><span class="w"> </span>
+<span class="w">    </span><span class="n">b</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="s">&quot;1000&quot;</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;00&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s">&quot;0100&quot;</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;01&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s">&quot;0010&quot;</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="s">&quot;10&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s">&quot;0001&quot;</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="k">others</span><span class="p">;</span>
+</code></pre></div></p>
+<p>O hardware gerado para o exemplo anterior é:</p>
+<p><img alt="" src="https://insper.github.io/Z01.1/figs/VHDL/VHDL-with-mux.svg" /></p>
+<ul>
+<li><strong>When Else</strong></li>
+</ul>
+<p>O construtor<code>when else</code>é um pouco mais geral, para cada opção você pode fornecer uma condição diferente. O mesmo exemplo do <code>with</code> ficaria escrito da seguinte maneira:</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">b</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="s">&quot;1000&quot;</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;00&quot;</span><span class="w"> </span><span class="k">else</span><span class="w"> </span>
+<span class="w">     </span><span class="s">&quot;0100&quot;</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;01&quot;</span><span class="w"> </span><span class="k">else</span><span class="w"> </span>
+<span class="w">     </span><span class="s">&quot;0010&quot;</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;10&quot;</span><span class="w"> </span><span class="k">else</span><span class="w"> </span>
+<span class="w">     </span><span class="s">&quot;0001&quot;</span><span class="p">;</span>
+</code></pre></div>
+<strong>Observação:</strong> A última opção não deve possuir nenhuma condição!</p>
+<p>Porém com o <code>when else</code> temos a flexibilidade de realizar algo como:</p>
+<div class="highlight"><pre><span></span><code><span class="n">b</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="s">&quot;1000&quot;</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;00&quot;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;1&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">else</span><span class="w"> </span>
+<span class="w">     </span><span class="s">&quot;0100&quot;</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;01&quot;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;1&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">else</span><span class="w"> </span>
+<span class="w">     </span><span class="s">&quot;0010&quot;</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;10&quot;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;1&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">else</span><span class="w"> </span>
+<span class="w">     </span><span class="s">&quot;0010&quot;</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;00&quot;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;1&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">else</span><span class="w"> </span>
+<span class="w">     </span><span class="s">&quot;0000&quot;</span><span class="p">;</span><span class="w">                                    </span><span class="c1">-- enable desativado</span>
+</code></pre></div>
 
 
 </section>
