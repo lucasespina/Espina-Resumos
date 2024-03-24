@@ -234,7 +234,7 @@
 <h3 id="executando-o-rqt_image_view">Executando o rqt_image_view</h3>
 <div class="highlight"><pre><span></span><code>ros2<span class="w"> </span>run<span class="w"> </span>rqt_image_view<span class="w"> </span>rqt_image_view
 </code></pre></div>
-<p><a href="#sumário">Voltar ao Sumário</a></p>
+<p><a href="#sumario">Voltar ao Sumário</a></p>
 <h1 id="_2"></h1>
 <h3 id="topicos-e-mensagens">Tópicos e Mensagens</h3>
 <ul>
@@ -268,7 +268,7 @@ O comando <strong>echo</strong> exibe as mensagens que estão sendo publicadas n
 <h3 id="visualizando-a-estrutura-das-mensagens">Visualizando a Estrutura das Mensagens</h3>
 <p><div class="highlight"><pre><span></span><code>ros2<span class="w"> </span>interface<span class="w"> </span>show<span class="w">  </span><span class="o">{</span><span class="s2">&quot;Nome do Pacote&quot;</span><span class="o">}</span>/msg/<span class="o">{</span><span class="s2">&quot;Nome da Mensagem&quot;</span><span class="o">}</span>
 </code></pre></div>
-<a href="#sumário">Voltar ao Sumário</a></p>
+<a href="#sumario">Voltar ao Sumário</a></p>
 <h1 id="_7"></h1>
 <h3 id="criar-um-novo-pacote">Criar um Novo Pacote</h3>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nb">cd</span><span class="w"> </span>~/colcon_ws/src
@@ -286,7 +286,7 @@ O comando <strong>echo</strong> exibe as mensagens que estão sendo publicadas n
 <p>Após criar um pacote, é necessário compilá-lo; utilizando o comando abaixo.
 <div class="highlight"><pre><span></span><code>cb
 </code></pre></div>
-<a href="#sumário">Voltar ao Sumário</a></p>
+<a href="#sumario">Voltar ao Sumário</a></p>
 <h1 id="_10"></h1>
 <h3 id="maquina-de-estados">Máquina de Estados</h3>
 <p>Uma máquina de estados é um modelo que descreve como um robô ou sistema se comporta. Ela é composta por estados, que são condições do sistema, e transições, que são as mudanças entre esses estados.
@@ -355,7 +355,7 @@ Usando como exemplo um robô que segue uma linha, podemos definir os seguintes e
 <li><strong>self.control()</strong> é a função que executa a máquina de estados</li>
 <li><strong>self.state_machine [self.robot_state] ()</strong> executa a função correspondente ao estado atual do robô</li>
 </ul>
-<p><a href="#sumário">Voltar ao Sumário</a></p>
+<p><a href="#sumario">Voltar ao Sumário</a></p>
 <h3 id="arquivos-de-base">Arquivos de Base</h3>
 <p>São arquivos que servem de base para a criação de novos nós. </p>
 <ul>
@@ -370,7 +370,7 @@ Usando como exemplo um robô que segue uma linha, podemos definir os seguintes e
 <p>Neste script, definimos a máquina de estados do robô (no dicionário <code>self.state_machine</code>), o estado inicial (no atributo <code>self.robot_state</code>) e a função de controle (no método <code>self.control()</code>), que a cada 0,25 segundos, executa a função <code>self.state_machine[self.robot_state]()</code> e publica a ação de controle no tópico <code>cmd_vel</code> (<code>self.cmd_vel_pub.publish(self.twist)</code>).</p>
 <p><strong>Dica:</strong> Em uma máquina de estados bem definida, a função de controle não precisa ser alterada, sendo ela a única função que publica no tópico <code>cmd_vel</code></p>
 <h1 id="_14"></h1>
-<p><a href="#sumário">Voltar ao Sumário</a></p>
+<p><a href="#sumario">Voltar ao Sumário</a></p>
 <hr />
 <h2 id="opencv2">OpenCV2</h2>
 <hr />
@@ -393,7 +393,7 @@ Usando como exemplo um robô que segue uma linha, podemos definir os seguintes e
 <p><div class="highlight"><pre><span></span><code># Output
 (linhas, colunas, canais)
 </code></pre></div>
-<a href="#sumário">Voltar ao Sumário</a></p>
+<a href="#sumario">Voltar ao Sumário</a></p>
 <h1 id="_18"></h1>
 <h3 id="conversao-de-cores">Conversão de Cores</h3>
 <p>A ordem dos sub-pixels das imagens no OpenCV é <strong>BGR</strong>, em vez de <strong>RGB</strong>.</p>
@@ -414,7 +414,7 @@ Usando como exemplo um robô que segue uma linha, podemos definir os seguintes e
 </ul>
 <p><div class="highlight"><pre><span></span><code><span class="n">img_hsv</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2HSV</span><span class="p">)</span>
 </code></pre></div>
-<a href="#sumário">Voltar ao Sumário</a></p>
+<a href="#sumario">Voltar ao Sumário</a></p>
 <h1 id="_19"></h1>
 <h3 id="copiar-uma-imagem">Copiar uma Imagem</h3>
 <div class="highlight"><pre><span></span><code><span class="n">img_copy</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -436,7 +436,7 @@ Usando como exemplo um robô que segue uma linha, podemos definir os seguintes e
 <span class="c1"># Corte Vertical</span>
 <span class="n">vertical</span><span class="p">[:,</span> <span class="nb">int</span><span class="p">(</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">):]</span> <span class="o">=</span> <span class="mi">0</span>
 </code></pre></div>
-<a href="#sumário">Voltar ao Sumário</a></p>
+<a href="#sumario">Voltar ao Sumário</a></p>
 <h1 id="_22"></h1>
 <h3 id="minimo-maximo-media-etc">Mínimo, Máximo, Média, etc.</h3>
 <p>Com o Numpy é fácil obter estatísticas da imagem. </p>
@@ -451,7 +451,7 @@ Usando como exemplo um robô que segue uma linha, podemos definir os seguintes e
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Maximo: &quot;</span><span class="p">,</span> <span class="n">maximo</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Media: &quot;</span><span class="p">,</span> <span class="n">media</span><span class="p">)</span>
 </code></pre></div>
-<a href="#sumário">Voltar ao Sumário</a></p>
+<a href="#sumario">Voltar ao Sumário</a></p>
 <h1 id="_23"></h1>
 <h3 id="operacoes-condicionais">Operações Condicionais</h3>
 <p>O Numpy permite fazer operações condicionais em arrays (imagens).</p>
@@ -462,7 +462,7 @@ Usando como exemplo um robô que segue uma linha, podemos definir os seguintes e
 <span class="n">codicionado</span><span class="p">[</span><span class="n">codicionado</span> <span class="o">&lt;</span> <span class="n">media</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">codicionado</span><span class="p">[</span><span class="n">codicionado</span> <span class="o">&gt;=</span> <span class="n">media</span><span class="p">]</span> <span class="o">=</span> <span class="mi">255</span>
 </code></pre></div>
-<a href="#sumário">Voltar ao Sumário</a></p>
+<a href="#sumario">Voltar ao Sumário</a></p>
 <h1 id="_24"></h1>
 <h3 id="area">Área</h3>
 <p>A função <code>cv2.inRange</code> realiza a operação de limiarização.</p>
@@ -504,7 +504,7 @@ O canal <strong>Value</strong> indica a luminosidade da cor.</p>
 <span class="c1"># Criando a máscara</span>
 <span class="n">mask</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">inRange</span><span class="p">(</span><span class="n">img_hsv</span><span class="p">,</span> <span class="n">inferior</span><span class="p">,</span> <span class="n">superior</span><span class="p">)</span>
 </code></pre></div>
-<a href="#sumário">Voltar ao Sumário</a></p>
+<a href="#sumario">Voltar ao Sumário</a></p>
 <h1 id="_29"></h1>
 <h3 id="indentificacao-de-obejtos">Indentificação de Obejtos</h3>
 <p><strong>Circulo HSV</strong> com os valores de <code>H</code> das cores</p>
@@ -548,7 +548,7 @@ O canal <strong>Value</strong> indica a luminosidade da cor.</p>
 <span class="c1"># Combinando as máscaras</span>
 <span class="n">mask_combinada</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">bitwise_or</span><span class="p">(</span><span class="n">mask_1</span><span class="p">,</span> <span class="n">mask_2</span><span class="p">)</span>
 </code></pre></div>
-<a href="#sumário">Voltar ao Sumário</a></p>
+<a href="#sumario">Voltar ao Sumário</a></p>
 <h1 id="_31"></h1>
 <h3 id="contornos">Contornos</h3>
 <p>Os contornos podem ser encontrados em imagens binárias com <code>cv2.findContours</code>. Esses contornos podem ser usados para identificar e delimitar objetos. Contornos são úteis para encontrar a área, o centro de massa e a caixa delimitadora de um objeto. A função <code>cv2.findContours</code> recebe como parâmetros a imagem binária de entrada, o modo de organização dos contornos e o método de aproximação dos contornos.</p>
@@ -589,7 +589,7 @@ O canal <strong>Value</strong> indica a luminosidade da cor.</p>
 <span class="n">img_contornos</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="n">cv2</span><span class="o">.</span><span class="n">drawContours</span><span class="p">(</span><span class="n">img_contornos</span><span class="p">,</span> <span class="n">contours</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span>
 </code></pre></div>
-<a href="#sumário">Voltar ao Sumário</a></p>
+<a href="#sumario">Voltar ao Sumário</a></p>
 <h1 id="_35"></h1>
 <h3 id="medidas-dos-contornos">Medidas Dos Contornos</h3>
 <p>A partir dos contornos, podemos tirar uma série de medidas como:
@@ -655,7 +655,7 @@ cY = int(M[&quot;m01&quot;] / M[&quot;m00&quot;])
 <span class="c1"># Desenha o centro do contorno com um crosshair</span>
 <span class="n">contornos_img</span> <span class="o">=</span> <span class="n">crosshair</span><span class="p">(</span><span class="n">contornos_img</span><span class="p">,</span> <span class="p">(</span><span class="n">cX</span><span class="p">,</span><span class="n">cY</span><span class="p">),</span> <span class="mi">10</span><span class="p">,</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
 </code></pre></div>
-<a href="#sumário">Voltar ao Sumário</a></p>
+<a href="#sumario">Voltar ao Sumário</a></p>
 <h1 id="_39"></h1>
 <h3 id="caixa-delimitadora">Caixa Delimitadora</h3>
 <p>Uma caixa delimitadora é um retângulo que delimita as coordenadas de um objeto. A caixa delimitadora é definida pelas coordenadas de seu canto <strong>superior esquerdo</strong> e sua <strong>largura e altura</strong>.</p>
@@ -678,13 +678,13 @@ cY = int(M[&quot;m01&quot;] / M[&quot;m00&quot;])
 <span class="c1"># Desenhando a caixa delimitadora</span>
 <span class="n">cv2</span><span class="o">.</span><span class="n">rectangle</span><span class="p">(</span><span class="n">caixa_img</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">w</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">h</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span>
 </code></pre></div>
-<p><a href="#sumário">Voltar ao Sumário</a></p>
+<p><a href="#sumario">Voltar ao Sumário</a></p>
 <h1 id="_40"></h1>
 <h3 id="ferramenta-de-imagem">Ferramenta de Imagem</h3>
 <p>Para executar a ferramenta de imagem, basta executar o comando abaixo.</p>
 <p><div class="highlight"><pre><span></span><code>ros2<span class="w"> </span>run<span class="w"> </span>image_tool<span class="w"> </span>start_image_tool
 </code></pre></div>
-<a href="#sumário">Voltar ao Sumário</a></p>
+<a href="#sumario">Voltar ao Sumário</a></p>
 
 
 </section>
