@@ -543,9 +543,8 @@
 <hr />
 <h2 id="sumario">Sumario</h2>
 <ul>
-<li>
-<p>Conteúdos:</p>
-<ul>
+<li>Conteúdos:<ul>
+<li>Tabela Verdade</li>
 <li>Componentes Digitais</li>
 <li>Aritmética Binária - HW: Half-Adder/ Full-Adder/ Somadores</li>
 <li>ULA</li>
@@ -558,6 +557,970 @@
 </ul>
 </li>
 </ul>
+<h2 id="algebra-booleana">Algebra Booleana</h2>
+<p>Na álgebra booleana, as variáveis podem assumir apenas dois valores: 0 ou 1.</p>
+<h3 id="tabela-verdade">Tabela Verdade</h3>
+<ul>
+<li>A tabela verdade é uma tabela que mostra todas as combinações possíveis de valores de entrada e a saída correspondente para uma equação booleana.</li>
+<li>A tabela verdade vai ter <span class="arithmatex">\(\mathbf{2^n}\)</span>
+ linhas, onde <code>n</code> é o número de variáveis de entrada.</li>
+</ul>
+<h1 id="_1"></h1>
+<h3 id="equacoes-booleanas-e-suas-operacoes">Equações booleanas e suas operações</h3>
+<p>As equações booleanas são expressões matemáticas que descrevem o comportamento de um circuito digital. Elas podem possuir uma ou mais entradas e apenas uma saída.</p>
+<h1 id="_2"></h1>
+<ul>
+<li>
+<h4 id="not">Not</h4>
+</li>
+</ul>
+<p>A operação de <code>not</code> é uma inversão da entrada: se a <code>entrada (A)</code>do operador for <code>1</code> sua <code>saída (X)</code> será <code>0</code> e vice versa.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Entrada A</th>
+<th style="text-align: center;">Saída(X)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Equação:</strong> <code>X =</code> <span class="arithmatex">\(\bar{A}\)</span></p>
+<h1 id="_3"></h1>
+<ul>
+<li>
+<h4 id="and">AND</h4>
+</li>
+</ul>
+<p>A operação de <code>and</code> pode ser entendida como uma multiplicação: A <code>saída (X)</code> só é verdadeira se as entradas <code>A</code> e <code>B</code> forem verdadeiras: <code>1</code> $\cdot$  <code>1</code> = <code>1</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Entrada A</th>
+<th style="text-align: center;">Entrada B</th>
+<th style="text-align: center;">Saída(X)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Equação:</strong> <code>X</code> = <code>A</code> $\cdot$ <code>B</code></p>
+<h1 id="_4"></h1>
+<ul>
+<li>
+<h4 id="or">OR</h4>
+</li>
+</ul>
+<p>A operação de <code>or</code> pode ser entendida como uma adição: A <code>saída (X)</code> só é verdadeira se pelo menos uma das entradas <code>A</code> ou <code>B</code> for verdadeira: <code>1 + 0 = 1</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Entrada A</th>
+<th style="text-align: center;">Entrada B</th>
+<th style="text-align: center;">Saída(X)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Equação:</strong> <code>X = A + B</code></p>
+<h1 id="_5"></h1>
+<ul>
+<li>
+<h4 id="nand">NAND</h4>
+</li>
+</ul>
+<p>A operação de <code>nand</code> é a inversão da operação <code>and</code>: A <code>saída (X)</code> só é verdadeira verdadeira quando as entradas <code>A</code> e <code>B</code> são falsas: <code>0</code>  $\cdot$ <code>0</code> = <code>1</code>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Entrada A</th>
+<th style="text-align: center;">Entrada B</th>
+<th style="text-align: center;">Saída(X)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Equação:</strong> <code>X =</code> <span class="arithmatex">\(\overline{A \cdot B}\)</span></p>
+<h1 id="_6"></h1>
+<h2 id="teoria-componentes">Teoria Componentes</h2>
+<h3 id="componentes-digitais">Componentes Digitais</h3>
+<p>Os componentes digitais são os blocos de construção básicos de circuitos digitais. Eles são usados para realizar operações lógicas e aritméticas.</p>
+<h1 id="_7"></h1>
+<ul>
+<li>
+<h4 id="portas-logicas">Portas Lógicas</h4>
+<div class="highlight"><pre><span></span><code><span class="n">S</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">B</span><span class="p">;</span><span class="w"> </span>
+<span class="n">S</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="k">nand</span><span class="w"> </span><span class="n">B</span><span class="p">;</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="p">(</span><span class="n">A</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">B</span><span class="p">)</span>
+<span class="n">S</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">B</span><span class="p">;</span>
+<span class="n">S</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="k">nor</span><span class="w"> </span><span class="n">B</span><span class="p">;</span><span class="w">  </span><span class="n">S</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="p">(</span><span class="n">A</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">B</span><span class="p">);</span>
+<span class="n">S</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="k">xor</span><span class="w"> </span><span class="n">B</span><span class="p">;</span>
+<span class="n">S</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="p">(</span><span class="k">not</span><span class="w"> </span><span class="n">A</span><span class="p">);</span>
+</code></pre></div></li>
+</ul>
+<h1 id="_8"></h1>
+<ul>
+<li>
+<h4 id="multiplexadomux">Multiplexado(MUX)</h4>
+</li>
+</ul>
+<p>O <strong>MUX</strong> é um componente que possui <code>n</code> entradas e uma saída <code>q</code>, um sinal chamado de seletor <code>sel</code> seleciona qual entrada irá ser copiada para a saída.
+As entradas <code>n</code> e a saída <code>q</code> podem ser binárias ou vetor de tamanho <code>m</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">entity</span><span class="w"> </span><span class="nc">mux</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="k">port</span><span class="p">(</span>
+<span class="w">    </span><span class="n">in0</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">    </span><span class="n">in1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">    </span><span class="n">sel</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">    </span><span class="n">o</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
+</code></pre></div>
+<h1 id="_9"></h1>
+<p><strong>Tabela Verdade do MUX de 2 entradas</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">In 0</th>
+<th style="text-align: center;">In 1</th>
+<th style="text-align: center;">sel</th>
+<th style="text-align: center;">out</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Observação</p>
+<p>A tabela verdade do mux de 2 entradas possuir <span class="arithmatex">\(\mathbf{2^3}\)</span> linhas (o seletor conta como entrada), totalizando 8 linhas. Porém para simplificar, utilizamos o <code>X</code> que significa tanto faz (<code>0</code> ou <code>1</code>), logo cada linha que possui <code>1</code> seria expandida para duas linhas.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Tamanho do seletor</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Quantidade de entradas (n)</th>
+<th style="text-align: center;">Tamanho do seletor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">3</td>
+</tr>
+</tbody>
+</table>
+<p><code>Tamanho do seletor</code> = $ \log_2(\text{size}(n))$</p>
+</div>
+<h1 id="_10"></h1>
+<ul>
+<li>
+<h4 id="demultiplexadordemux">Demultiplexador(DEMUX)</h4>
+</li>
+</ul>
+<p>O <strong>Demux</strong> possui uma entrada <code>in</code> e <code>n</code> saídas <code>q</code>, o demux conecta a entrada a alguma das saídas, sendo controladas pelo sinal de seletor <code>sel</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">entity</span><span class="w"> </span><span class="nc">demux</span><span class="w"> </span><span class="k">is</span>
+<span class="k">port</span><span class="p">(</span>
+<span class="w">        </span><span class="n">in0</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">sel</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">out0</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">out1</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span>
+<span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
+</code></pre></div>
+<h1 id="_11"></h1>
+<p><strong>Tabela Verdade do DEMUX de 2 saídas</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">In 0</th>
+<th style="text-align: center;">Sel</th>
+<th style="text-align: center;">Out 0</th>
+<th style="text-align: center;">Out 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="enconders">Enconders</h2>
+<p>Enconders são componentes que codificam uma entrada em uma saída de outro formato.</p>
+<ul>
+<li>
+<h3 id="binary-coded-decimal-bcd">Binary-coded Decimal (BCD)</h3>
+</li>
+</ul>
+<p>É uma forma de codificação de números inteiros em binário na qual utiliza-se para cada dígito de um número inteiro, 4 bits em binário.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Decimal Number</th>
+<th style="text-align: center;">BCD 8421 Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0000 0000</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0000 0001</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0000 0010</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0000 0011</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0000 0100</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0000 0101</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0000 0110</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0000 0111</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0000 1000</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0000 1001</td>
+</tr>
+<tr>
+<td style="text-align: center;">10 (1+0)</td>
+<td style="text-align: center;">0001 0000</td>
+</tr>
+<tr>
+<td style="text-align: center;">11 (1+1)</td>
+<td style="text-align: center;">0001 0001</td>
+</tr>
+<tr>
+<td style="text-align: center;">12 (1+2)</td>
+<td style="text-align: center;">0001 0010</td>
+</tr>
+<tr>
+<td style="text-align: center;">continua</td>
+<td style="text-align: center;">em blocos de 4 bits</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Diagrama</p>
+<p><img alt="" src="../Imgs/bcd.png" /></p>
+</div>
+<h1 id="_12"></h1>
+<div class="highlight"><pre><span></span><code><span class="k">entity</span><span class="w"> </span><span class="nc">binaryToBCD</span><span class="w"> </span><span class="k">is</span>
+<span class="k">port</span><span class="p">(</span>
+<span class="w">        </span><span class="n">x</span><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">out0</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">-- Unidade</span>
+<span class="w">        </span><span class="n">out1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w">  </span><span class="c1">-- Dezena</span>
+<span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
+</code></pre></div>
+<h1 id="_13"></h1>
+<p><strong>Observação:</strong> O maior valor que um bloco de 4 bits do BCD assume é o 1001 que é referente ao número inteiro 9.</p>
+<ul>
+<li>
+<h3 id="gray-code">Gray Code</h3>
+</li>
+</ul>
+<p>O código gray é uma forma de codificar números binários, nessa codificação apenas um bit muda por vez.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Código decimal</th>
+<th style="text-align: center;">Código Binário</th>
+<th style="text-align: center;">Código Gray</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0000</td>
+<td style="text-align: center;">0000</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0001</td>
+<td style="text-align: center;">0001</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0010</td>
+<td style="text-align: center;">0011</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0011</td>
+<td style="text-align: center;">0010</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0100</td>
+<td style="text-align: center;">0110</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0101</td>
+<td style="text-align: center;">0111</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0110</td>
+<td style="text-align: center;">0101</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0111</td>
+<td style="text-align: center;">0100</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">1000</td>
+<td style="text-align: center;">1100</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">1001</td>
+<td style="text-align: center;">1101</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">1010</td>
+<td style="text-align: center;">1111</td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">1011</td>
+<td style="text-align: center;">1110</td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">1100</td>
+<td style="text-align: center;">1010</td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">1101</td>
+<td style="text-align: center;">1011</td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">1110</td>
+<td style="text-align: center;">1001</td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">1111</td>
+<td style="text-align: center;">1000</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<h3 id="comparador">Comparador</h3>
+</li>
+</ul>
+<p>Comparadores são componentes que podem possuir diversos atributos, tais como comparar:</p>
+<ul>
+<li>se duas entradas são iguais</li>
+<li>se a entrada A é maior que entrada B</li>
+<li>se entrada A é igual a zero</li>
+<li>...</li>
+</ul>
+<p>A seguir um exemplo de um comparador que possui apenas uma entrada <code>x[1..0]</code> e compara se essa entrada é <strong>igual a zero (eq)</strong> <code>(x == 0)</code>, ou se é <strong>maior que zero (gt)</strong> <code>(x &gt; 0)</code>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">X (Inteiro)</th>
+<th style="text-align: center;">X (Binário)</th>
+<th style="text-align: center;">EQ</th>
+<th style="text-align: center;">GT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">00</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">01</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">-1</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Diagama</p>
+<p><img alt="" src="../Imgs/comparador.png" /></p>
+</div>
+<h1 id="_14"></h1>
+<div class="highlight"><pre><span></span><code><span class="k">entity</span><span class="w"> </span><span class="nc">COMPARADOR</span><span class="w"> </span><span class="k">is</span>
+<span class="k">port</span><span class="p">(</span>
+<span class="w">        </span><span class="n">x</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">eq</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">gt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span>
+<span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
+</code></pre></div>
+<ul>
+<li>
+<h3 id="somadores">Somadores</h3>
+</li>
+</ul>
+<p>Os somadores são componentes que realizam a soma de dois números binários.</p>
+<p>Um somador de dois vetores de dois bits cada possui o seguinte comportamento:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">in0</th>
+<th style="text-align: center;">in1</th>
+<th style="text-align: center;">out</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">00</td>
+<td style="text-align: center;">00</td>
+<td style="text-align: center;">00</td>
+</tr>
+<tr>
+<td style="text-align: center;">00</td>
+<td style="text-align: center;">01</td>
+<td style="text-align: center;">01</td>
+</tr>
+<tr>
+<td style="text-align: center;">01</td>
+<td style="text-align: center;">01</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">01</td>
+<td style="text-align: center;">011</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">101</td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">110</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Diagrama</p>
+<p><img alt="" src="../Imgs/adder.png" /></p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">entity</span><span class="w"> </span><span class="nc">ADDER</span><span class="w"> </span><span class="k">is</span>
+<span class="w">    </span><span class="k">port</span><span class="p">(</span>
+<span class="w">            </span><span class="n">in0</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">            </span><span class="n">in1</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">            </span><span class="n">o</span><span class="w">     </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="teoria-aritmetica-binaria">Teoria Aritmética Binária</h2>
+<h3 id="half-adder-had">Half-Adder (HAD)</h3>
+<p><strong>Half-Adder (HAD</strong>) é um circuito digital capaz de somar dois bits (<code>a</code> e <code>b</code>), tem como resultado o valor da <code>soma</code> e do <code>carry</code>, como ilustrado a seguir:</p>
+<p><strong>Tabela Verdade do Half-Adder</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">a</th>
+<th style="text-align: center;">b</th>
+<th style="text-align: center;">carry(out)</th>
+<th style="text-align: center;">soma(out)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Diagrama</p>
+<p><img alt="" src="../Imgs/HAD.png" /></p>
+</div>
+<p>E é implementado em hardware da seguinte maneira:</p>
+<h1 id="_15"></h1>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Half_Adder.svg/440px-Half_Adder.svg.png" /></p>
+<h3 id="full-adder-fad">Full-Adder (FAD)</h3>
+<p><strong>Full-Adder (FAD)</strong> é um componente digital capaz de somar três bits (<code>a</code>, <code>b</code> e <code>c</code>), tem como resultado o valor da <code>soma</code> e do <code>carry</code>.</p>
+<p><strong>Tabela Verdade do Full-Adder</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">a</th>
+<th style="text-align: center;">b</th>
+<th style="text-align: center;">c</th>
+<th style="text-align: center;">carry(out)</th>
+<th style="text-align: center;">soma(out)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Diagrama</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/1-bit_full-adder.svg/440px-1-bit_full-adder.svg.png" /></p>
+</div>
+<h1 id="_16"></h1>
+<p>E é implementado em hardware da seguinte maneira:</p>
+<div class="highlight"><pre><span></span><code>![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Full-adder_logic_diagram.svg/440px-Full-adder_logic_diagram.svg.png)
+</code></pre></div>
+<h3 id="somador">Somador</h3>
+<p>Utilizando o <strong>FAD</strong> somos capazes de realizar um somador de dois vetores binários. Para isso, teremos que utilizar um full-adder para cada bit desse nosso vetor.</p>
+<p>Por exemplo: se formos criar um Somador capaz de somar dois vetores de 4bits, necessitamos utilizar 4 FAD para isso com a ligação descrita a seguir:</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/4-bit_ripple_carry_adder.svg/2560px-4-bit_ripple_carry_adder.svg.png" /></p>
+<p>Nesse diagrama, estamos realizando a soma ente os vetores <code>A(3 downto 0)</code> e <code>B(3 downto 0)</code>que resulta em um outro vetor <code>S(3 downto 0)</code> e um carry <code>C4</code>.</p>
+<h3 id="teoria-logica-sequencial">Teoria Lógica Sequencial</h3>
+<p>Na lógica sequencial, o estado anterior das entradas influencia na saída, ou seja, essa lógica possui uma memória.</p>
+<p><img alt="" src="https://insper.github.io/Z01.1/commum-content/teoria/figs/LogicaSequencial-visaoGeral.png" /></p>
+<p>Sistemas sequências são em sua grande maioria combinados com sistema síncrono, onde todos o circuito digital opera em um determinado ritmo, esse sinal é conhecido como clock do sistema.</p>
+<h4 id="circuitos-biestaveis">Circuitos biestáveis</h4>
+<p>Os circuitos biestáveis permancem em um dos dois estados binário (<code>0</code> ou <code>1</code>) enquanto estiver energizado. Eles são usados para armazenar e recuperar os estados dos bits dos computadores.</p>
+<ul>
+<li>
+<h4 id="latch-sr">latch SR</h4>
+O latch SR é um circuito biestável composto de duas portas NOR que armazenam um valor simples.</li>
+</ul>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/RS_Flip-flop_%28NOR%29.svg/200px-RS_Flip-flop_%28NOR%29.svg.png" /></p>
+<p>Neste circuito normalmente as entradas <code>S</code> e <code>R</code>, conhecidas como <code>Set</code> e <code>Reset</code>, ficam em nível baixo. Enquanto estiverem assim o valor das saídas <code>Q</code> e <span class="arithmatex">\(\overline{Q}\)</span>, que é sempre o inverso do <code>Q</code>, se mantem inalterados. Se o nível do <code>S</code> subir (<code>1</code>) a saída <code>Q</code> fica em nível alto, ou podemos dizer <code>1</code>, já se o nível do <code>R</code>, <code>Q</code> fica em nível lógico baixo, ou seja <code>0</code>. </p>
+<p><strong>Tabela Verdade do Latch SR:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">S</th>
+<th style="text-align: center;">R</th>
+<th style="text-align: center;">Q</th>
+<th style="text-align: center;"><span class="arithmatex">\(\overline{Q}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">Armazenado</td>
+<td style="text-align: center;">Armazenado</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">metaestável</td>
+<td style="text-align: center;">metaestável</td>
+</tr>
+</tbody>
+</table>
+<p><strong>metaestável</strong>: Indica que a saída pode ser 0 ou 1, e que não podemos prever qual será.</p>
+<ul>
+<li>
+<h4 id="latch-tipo-d">Latch Tipo D</h4>
+</li>
+</ul>
+<p>O latch tipo D é um circuito biestável, nesse caso o circuito mantem o valor da entrada de Dados D enquanto a entrada de Enable <code>E</code> estiver em nível alto, se o sinal <code>E</code> for para nível baixo o circuito não muda de estado.</p>
+<p><img alt="" src="https://insper.github.io/Z01.1/commum-content/teoria/figs/Logica-Sequencial-latch-D.svg" /></p>
+<p><strong>Tabela Verdade do Latch D:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">E</th>
+<th style="text-align: center;">D</th>
+<th style="text-align: center;">Q</th>
+<th style="text-align: center;"><span class="arithmatex">\(\overline{Q}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">Armazenado</td>
+<td style="text-align: center;">Armazenado</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">Armazenado</td>
+<td style="text-align: center;">Armazenado</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">Copiada Entrada <code>D:</code> <code>0</code></td>
+<td style="text-align: center;">Copia Entrada <code>D</code> negada: <code>1</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">Copiada Entrada <code>D:</code> <code>1</code></td>
+<td style="text-align: center;">Copia Entrada <code>D</code> negada: <code>0</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<h4 id="clock">Clock</h4>
+</li>
+</ul>
+<p>O clock é um sinal elétrico periódico utilizado para sincronizar sistemas digitais, utilizado em todo circuito síncrono, serve como o 'baterista' da banda, dando o ritmo de execução para a eletrônica. A cada novo clock (instante que ocorre uma mudança no sinal <code>0 -&gt; 1</code>), o sistema começa uma nova operação. O sinal do clock é geralmente periódico e de modulação 50% (50% em alto e 50% em baixo):</p>
+<p><img alt="" src="https://insper.github.io/Z01.1/commum-content/teoria/figs/Logica-Sequencial-clock.svg" /></p>
+<ul>
+<li>
+<p><strong>Frequência:</strong>
+    F = <span class="arithmatex">\(\frac{1}{L}\)</span></p>
+</li>
+<li>
+<p><strong>Clock de 3Ghz</strong>
+    São 3 bilhões <code>3.000.000.000</code> de bordas <code>(0 -&gt; 1)</code> em um segundo!! Imagine que a cada borda, uma operação é realizada no computador, são 3 bilhões de operações em um único segundo....</p>
+</li>
+<li>
+<p><strong>Overclock:</strong></p>
+<p>Nessa técnica, aumentasse o clock para uma frequência na qual o sistema não foi projetado para operar, consequências disso são:</p>
+<ul>
+<li>Possíveis erros de processamento (dado que parte do circuito pode ser mais lento que o <span class="arithmatex">\(\frac{1}{L}\)</span>)</li>
+<li>Superaquecimento do chip, já que a tecnologia atual utilizada para fabricação de componentes eletrônicos (MOSFET) 'gasta' energia a cada clock. Com um aumento no clock, mais energia é gasta por segundo</li>
+</ul>
+</li>
+<li>
+<p><strong>Borda:</strong></p>
+<p>Nem todo sistema digital trabalha com borda de subida (rising_edge) (0 -&gt; 1), outras opções são:</p>
+<ul>
+<li>borda de descida <code>(falling_edge): 1 -&gt; 0</code>.
+double data rate (DDR): Uma nova mudança a cada borda, subida e descida. (Dai que vem o nome da memória DDR4 do seu computador!)</li>
+</ul>
+</li>
+</ul>
+<h3 id="flip-flop">Flip-Flop</h3>
+<p>Flip-Flop (FF) é um circuito similar ao LATCH porém síncrono, ou seja, a mudança na saída (Q) só ocorre na borda do clock.</p>
+<h4 id="flip-flop-tipo-d">Flip-Flop tipo D:</h4>
+<p>O Flip-Flop tipo D possui as seguintes portas:</p>
+<ul>
+<li><code>D:</code> entrada do de Dado</li>
+<li><code>Q:</code> saída do dado copiado</li>
+<li><span class="arithmatex">\(\overline{Q}:\)</span> saída do dado copiado negado</li>
+<li><code>CLK:</code> entrada do clock </li>
+</ul>
+<p><img alt="" src="https://insper.github.io/Z01.1/commum-content/teoria/figs/Logica-Sequencial-FF-D.svg" /></p>
+<p>Toda vez que o ocorre uma borda de subina no clock, o sinal que está na entrada D é copiado para a saída Q, conforme diagrama a seguir:</p>
+<p><img alt="" src="https://insper.github.io/Z01.1/commum-content/teoria/figs/Logica-Sequencial-FF-D-time.svg" /></p>
+<p><strong>Tabela Verdade do Flip-Flop D:</strong>
+| D (in) | CLK (in) | Q (out) |
+|:------:|:--------:|:-------:|
+|    0   |    0     |    Q*    |
+|    1   |    1     |    Q*    |
+|    0   |    ^     |    0     |
+|    1   |    ^     |    1     |</p>
+<ul>
+<li>
+<p><strong>Observação:</strong></p>
+<ul>
+<li><code>^</code>: indica que a borda de subida do clock</li>
+<li><code>Q*</code>: indica que o valor de <code>Q</code> é o mesmo que o valor anterior</li>
+</ul>
+<h5 id="clear-e-preset">Clear e Preset</h5>
+<p>FF do tipo D podem possuir mais dois sinais de controle: <code>clear</code> e <code>preset</code>. O sinal <code>clear</code> faz com que a saída <code>Q</code> vá para <code>0</code> independe da entada <code>D</code> e do <code>clock</code>. O sinal <code>preset</code> faz com que a saída <code>Q</code> vá para <code>1</code> independente da entrada <code>D</code> e do <code>clock</code>.</p>
+</li>
+</ul>
+<p><strong>Tabela Verdade do Flip-Flop D com Clear e Preset:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">D (in)</th>
+<th style="text-align: center;">Clear</th>
+<th style="text-align: center;">Set</th>
+<th style="text-align: center;">CLK (in)</th>
+<th style="text-align: center;">Q (out)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">Q*</td>
+</tr>
+<tr>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">^</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">^</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="vhdl">VHDL</h2>
 
 
 </section>
