@@ -585,9 +585,6 @@
 <li><a href="#arquitetura-architecture">Arquitetura (architecture)</a></li>
 <li><a href="#vhdl-combinacional">VHDL: Combinacional</a></li>
 <li><a href="#vhdl-sequencial">VHDL: Sequencial</a></li>
-<li><a href="#rtl">RTL</a></li>
-<li><a href="#formas-de-onda">Formas de Onda</a></li>
-<li><a href="#arquivos-de-teste">Arquivos de Teste</a></li>
 </ul>
 </li>
 </ul>
@@ -1607,7 +1604,9 @@ double data rate (DDR): Uma nova mudança a cada borda, subida e descida. (Dai q
 </code></pre></div>
 <h1 id="_18"></h1>
 <ul>
-<li><strong>Entity:</strong> </li>
+<li>
+<h4 id="entity">Entity:</h4>
+</li>
 </ul>
 <p>Podemos pensar na entidade como o trecho de código que define o módulo como uma caixa preta, ela explicita quem são as entradas e quais são as saídas desse módulo. Assim como um CHIP, que possui pinos de entradas e pinos de saída.</p>
 <p><img alt="" src="https://insper.github.io/Z01.1/figs/VHDL/entidade-descricao.png" /></p>
@@ -1678,7 +1677,9 @@ double data rate (DDR): Uma nova mudança a cada borda, subida e descida. (Dai q
 </div>
 <h1 id="_19"></h1>
 <ul>
-<li><strong>Arquitetura (architecture)</strong></li>
+<li>
+<h4 id="arquitetura-architecture">Arquitetura (architecture)</h4>
+</li>
 </ul>
 <p>A arquitetura (<code>architecture</code>) define a relação das entradas com as saídas da entidade. Nessa parte é onde será construída a lógica digital desse módulo. Pense que é na arquitetura onde transcrevemos uma equação lógica, ou onde descrevemos uma memória.</p>
 <p><div class="highlight"><pre><span></span><code><span class="k">architecture</span><span class="w"> </span><span class="nc">rtl</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">TopLevel</span><span class="w"> </span><span class="k">is</span>
@@ -1695,7 +1696,7 @@ double data rate (DDR): Uma nova mudança a cada borda, subida e descida. (Dai q
 
 <span class="k">end</span><span class="w"> </span><span class="nc">rtl</span><span class="p">;</span>
 </code></pre></div>
-<strong>Operações Básicas:</strong></p>
+- #### Operações Básicas:</p>
 <div class="admonition note">
 <p class="admonition-title">Suponha o uso da entidade a seguir para os exemplos seguintes</p>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">entity</span><span class="w"> </span><span class="nc">Foo</span><span class="w"> </span><span class="k">is</span>
@@ -1828,7 +1829,8 @@ No exemplo anterior, criamos um sinal auxiliar chamado de <code>aux1</code> que 
 <p>Em sistemas digitais, lógica combinacional é aquela que não depende do estado anterior (não possui memória), podemos classificar portas lógicas (and, or, nand ...), mux, demux, comparadores, full address e outros componentes como sendo do tipo combinacional.</p>
 <h1 id="_20"></h1>
 <ul>
-<li><strong>Equações</strong>
+<li>
+<h4 id="equacoes">Equações</h4>
 Podemos escrever equações em VHDL utilizando os seguintes operadores: <code>not, and, or, nor, xor, xnor.</code> Como no exemplo a seguir:</li>
 </ul>
 <p>X = <span class="arithmatex">\((\overline{A} \cdot B) + C\)</span></p>
@@ -1837,7 +1839,8 @@ Podemos escrever equações em VHDL utilizando os seguintes operadores: <code>no
 </code></pre></div></p>
 <h1 id="_21"></h1>
 <ul>
-<li><strong>Concatenate</strong>
+<li>
+<h4 id="concatenate">Concatenate</h4>
 Em VHDL podemos concatenar bit para formar vetores, isso é feito da seguinte forma:</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="k">signal</span><span class="w"> </span><span class="n">bit0</span><span class="p">,</span><span class="w"> </span><span class="n">bit1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
@@ -1851,7 +1854,9 @@ Em VHDL podemos concatenar bit para formar vetores, isso é feito da seguinte fo
 </code></pre></div>
 <p>No exemplo anterior, temos um vetor de 2 bits (<code>vec</code>) que é formado por: <code>[bit1, bit0]</code>.</p>
 <ul>
-<li><strong>With Select</strong></li>
+<li>
+<h4 id="with-select">With Select</h4>
+</li>
 </ul>
 <p>O <code>with select</code> em VHDL é utilizado quando desejamos que um sinal (ou saída) receba diferentes valores com base em um sinal de seleção. No exemplo a seguir, o sinal <code>b</code> recebe o valor <code>1000</code> quando o sinal de seleção <code>a</code> for <code>00, 0100</code> quando a for <code>01</code>, ..., note que no último caso usamos o <code>others</code>, ele entrou no lugar do <code>11</code>.
 <div class="highlight"><pre><span></span><code><span class="k">signal</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span>
@@ -1868,7 +1873,9 @@ Em VHDL podemos concatenar bit para formar vetores, isso é feito da seguinte fo
 <p>O hardware gerado para o exemplo anterior é:</p>
 <p><img alt="" src="https://insper.github.io/Z01.1/figs/VHDL/VHDL-with-mux.svg" /></p>
 <ul>
-<li><strong>When Else</strong></li>
+<li>
+<h4 id="when-else">When Else</h4>
+</li>
 </ul>
 <p>O construtor<code>when else</code>é um pouco mais geral, para cada opção você pode fornecer uma condição diferente. O mesmo exemplo do <code>with</code> ficaria escrito da seguinte maneira:</p>
 <p><div class="highlight"><pre><span></span><code><span class="n">b</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="s">&quot;1000&quot;</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;00&quot;</span><span class="w"> </span><span class="k">else</span><span class="w"> </span>
