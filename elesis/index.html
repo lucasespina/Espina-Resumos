@@ -599,7 +599,7 @@
  linhas, onde <code>n</code> é o número de variáveis de entrada.</li>
 </ul>
 <h1 id="_2"></h1>
-<h3 id="equacoes-booleanas-e-suas-operacoes">Equações booleanas e suas operações</h3>
+<h3 id="equacoes-booleanas-e-suas-operacoes">Equações booleanas e Suas Operações</h3>
 <p>As equações booleanas são expressões matemáticas que descrevem o comportamento de um circuito digital. Elas podem possuir uma ou mais entradas e apenas uma saída.</p>
 <h1 id="_3"></h1>
 <ul>
@@ -745,13 +745,12 @@
 </table>
 <p><strong>Equação:</strong> <code>X =</code> <span class="arithmatex">\(\overline{A \cdot B}\)</span></p>
 <h1 id="_7"></h1>
-<h2 id="teoria-componentes">Teoria Componentes</h2>
-<h3 id="componentes-digitais">Componentes Digitais</h3>
+<h2 id="teoria-componentes-componentes-digitais">Teoria Componentes Componentes Digitais</h2>
 <p>Os componentes digitais são os blocos de construção básicos de circuitos digitais. Eles são usados para realizar operações lógicas e aritméticas.</p>
 <h1 id="_8"></h1>
 <ul>
 <li>
-<h4 id="portas-logicas">Portas Lógicas</h4>
+<h3 id="portas-logicas">Portas Lógicas</h3>
 <div class="highlight"><pre><span></span><code><span class="n">S</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">B</span><span class="p">;</span><span class="w"> </span>
 <span class="n">S</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="k">nand</span><span class="w"> </span><span class="n">B</span><span class="p">;</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="p">(</span><span class="n">A</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">B</span><span class="p">)</span>
 <span class="n">S</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">B</span><span class="p">;</span>
@@ -763,7 +762,7 @@
 <h1 id="_9"></h1>
 <ul>
 <li>
-<h4 id="multiplexadormux">Multiplexador(MUX)</h4>
+<h3 id="multiplexadormux">Multiplexador(MUX)</h3>
 </li>
 </ul>
 <p>O <strong>MUX</strong> é um componente que possui <code>n</code> entradas e uma saída <code>q</code>, um sinal chamado de seletor <code>sel</code> seleciona qual entrada irá ser copiada para a saída.
@@ -854,7 +853,7 @@ As entradas <code>n</code> e a saída <code>q</code> podem ser binárias ou veto
 <h1 id="_11"></h1>
 <ul>
 <li>
-<h4 id="demultiplexadordemux">Demultiplexador(DEMUX)</h4>
+<h3 id="demultiplexadordemux">Demultiplexador(DEMUX)</h3>
 </li>
 </ul>
 <p>O <strong>Demux</strong> possui uma entrada <code>in</code> e <code>n</code> saídas <code>q</code>, o demux conecta a entrada a alguma das saídas, sendo controladas pelo sinal de seletor <code>sel</code>.</p>
@@ -903,16 +902,26 @@ As entradas <code>n</code> e a saída <code>q</code> podem ser binárias ou veto
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">0</td>
 </tr>
+<tr>
+<td style="text-align: center;">#</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">## Enconders</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
 </tbody>
 </table>
-<h2 id="enconders">Enconders</h2>
 <p>Enconders são componentes que codificam uma entrada em uma saída de outro formato.</p>
 <ul>
 <li>
 <h3 id="binary-coded-decimal-bcd">Binary-coded Decimal (BCD)</h3>
-</li>
+É uma forma de codificação de números inteiros em binário na qual utiliza-se para cada dígito de um número inteiro, 4 bits em binário.</li>
 </ul>
-<p>É uma forma de codificação de números inteiros em binário na qual utiliza-se para cada dígito de um número inteiro, 4 bits em binário.</p>
 <table>
 <thead>
 <tr>
@@ -1891,6 +1900,273 @@ Em VHDL podemos concatenar bit para formar vetores, isso é feito da seguinte fo
 <span class="w">     </span><span class="s">&quot;0010&quot;</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;00&quot;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;1&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">else</span><span class="w"> </span>
 <span class="w">     </span><span class="s">&quot;0000&quot;</span><span class="p">;</span><span class="w">                                    </span><span class="c1">-- enable desativado</span>
 </code></pre></div>
+<h1 id="_22"></h1>
+<h2 id="prova-semestre-232">Prova semestre 23.2</h2>
+<hr />
+<p>Deve-se baixar o arquivo: <strong><a href="../Provas/Av2%20elesis.zip">Prova.zip</a></strong></p>
+<h3 id="enunciado">Enunciado</h3>
+<h1 id="av2-2-semestre-de-2023">Av2 - 2° Semestre de 2023</h1>
+<p>Avaliação 2 - Elementos de Sistemas</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Pontos HW</th>
+<th style="text-align: center;">Pontos SW</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">10</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Avaliação individual.</li>
+<li>120 min total.</li>
+<li>Ficar no blackboard durante a prova.</li>
+<li>Fazer commit ao final de cada questão.</li>
+<li>Lembre de dar <strong>push</strong> ao final.</li>
+</ul>
+<h2 id="1-logica-combinacional-alarme">1. Lógica combinacional - alarme</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Pontos HW</th>
+<th style="text-align: center;">Pontos SW</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<p>Um banco quer instalar um sistema de alarme com sensores de movimento.
+Os sensores indicam '1' quando há movimento e '0' quando não há.
+Há duas zonas de segurança X e Y, sendo que a zona X é composta pelos sensores A, B e C enquanto a zona Y possui os sensores D, E, F e G.
+Um alarme (S) dever ser disparado (nível lógico '1') sempre que pelo menos um dos alarmes Sx e Sy de cada zona for disparado.
+Para que Sx seja disparado, ao menos dois dos sensores A, B e C devem indicar movimentos simultaneamente.
+Para que Sy seja disparado, ao menos dois dos sensores D, E, F e G devem indicar movimentos simultaneamente.</p>
+<p>Escreva o código me VHDL para o alarme S.</p>
+<h3 id="implementacao">Implementação</h3>
+<p>Implemente a saída <code>S</code> no arquivo <code>src/alarme.vhd</code>.</p>
+<p><strong>Lembre de testar com <code>pytest -k alarme</code></strong></p>
+<h4 id="rubrica-para-avaliacao">Rubrica para avaliação:</h4>
+<table>
+<thead>
+<tr>
+<th>Pontos HW</th>
+<th>Descritivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>Implementação de Sx</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Implementação de Sy</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Implementação de S</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-logica-combinacional-vhdl">2. Lógica combinacional - VHDL</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Pontos HW</th>
+<th style="text-align: center;">Pontos SW</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<p>Considere o código vhdl a seguir:</p>
+<div class="highlight"><pre><span></span><code>library IEEE; 
+
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity blocoX is
+
+    port ( 
+
+            a:   in  STD_LOGIC_VECTOR(15 downto 0);
+
+            q:  out STD_LOGIC_VECTOR(15 downto 0));
+
+end entity;
+
+architecture rtl of blocoX is
+
+            SIGNAL y: STD_LOGIC_VECTOR(7 downto 0);
+
+begin
+
+            y &lt;= a(15 downto 8) xor a(7 downto 0);
+
+            q &lt;= &quot;00000000&quot; &amp; y;
+
+end;
+</code></pre></div>
+<h3 id="questoes">Questões:</h3>
+<ol>
+<li>Explique o que o circuito faz no arquivo <code>src\blocoX.txt</code>.</li>
+<li>Desenhe o circuito lógico correspondente.</li>
+</ol>
+<h4 id="rubrica-para-avaliacao_1">Rubrica para avaliação:</h4>
+<table>
+<thead>
+<tr>
+<th>Pontos HW</th>
+<th>Descritivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td>Para cada item</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-somador">3. Somador</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Pontos HW</th>
+<th style="text-align: center;">Pontos SW</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<p>Queremos agora implementar o circuito digital da figura a seguir:</p>
+<p><img alt="" src="figs/cla.jpg" /></p>
+<p>Esse circuito é um somador Carry-Lookahed de 4 bits que evita a propagação do vaium que ocorre no somador visto em aula.</p>
+<h3 id="implementacaoquestao">Implementação/questão:</h3>
+<ol>
+<li>Implemente o somador de 4 bits no arquivo <code>src\add4.vhd</code></li>
+</ol>
+<p><strong>Para simplificar a implementação, considere c0 = '0'. Não é necessário implementar a saída c4</strong></p>
+<p><strong>Considere que a saída q no arquivo vhd representa um vetor com os bits S3 S2 S1 S0.</strong></p>
+<ol>
+<li>Qual a vantagem em se evitar a propagação do carry entre os Full-Adders? Responda no arquivo <code>src\carry.txt</code>.</li>
+</ol>
+<p><strong>Lembre de testar com <code>pytest -k add4</code></strong></p>
+<h4 id="rubrica-para-avaliacao_2">Rubrica para avaliação:</h4>
+<table>
+<thead>
+<tr>
+<th>Pontos HW</th>
+<th>Descritivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7</td>
+<td>Implementação do somador</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Vantagem do circuito</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-logica-sequencial">4. Lógica sequencial</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Pontos HW</th>
+<th style="text-align: center;">Pontos SW</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<p>Queremos agora implementar o circuito digital da figura a seguir:</p>
+<p><img alt="" src="figs/circuito.png" /></p>
+<p>Utilize o Flip-Flop D desenvolvido em aula para implementar o circuito.</p>
+<h3 id="implementacaoquestao_1">Implementação/questão:</h3>
+<ol>
+<li>Implemente o circuito no arquivo <code>src\circuito.vhd</code></li>
+<li>Qual a função do circuito? Responda no arquivo <code>src\circuito.txt</code>.</li>
+</ol>
+<p><strong>Lembre de testar com <code>pytest -k circuito</code></strong></p>
+<h4 id="rubrica-para-avaliacao_3">Rubrica para avaliação:</h4>
+<table>
+<thead>
+<tr>
+<th>Pontos HW</th>
+<th>Descritivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7</td>
+<td>Implementação do circuito</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Função do circuito</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-identificacao-de-erro">5. Identificação de erro</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Pontos HW</th>
+<th style="text-align: center;">Pontos SW</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">10</td>
+</tr>
+</tbody>
+</table>
+<p>A figura a seguir apresenta as curvas obtidas no GTKWave como resultado da simulação do módulo <code>pc.vhd</code>.
+Entretanto, esse módulo apresenta um erro. Identifique, a partir das curvas fornecidas a condição em que está ocorrendo o erro.</p>
+<p><img alt="" src="figs/erro.PNG" width="300" /></p>
+<h3 id="implementacao_1">Implementação</h3>
+<p>Identifique o intervalo em que o erro ocorre e descreva qual seria o resultado esperado no arquivo <code>src/erro_pc.txt</code>.</p>
+<h4 id="rubrica-para-avaliacao_4">Rubrica para avaliação:</h4>
+<table>
+<thead>
+<tr>
+<th>Pontos SW</th>
+<th>Descritivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>Intervalo identificado e erro descrito corretamente.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Apenas o intervalo foi identificado corretamente.</td>
+</tr>
+</tbody>
+</table>
 
 
 </section>

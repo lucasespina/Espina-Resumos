@@ -1,0 +1,7 @@
+Em que intervalo de tempo está ocorrendo o erro?
+
+21ns a 27ns 
+
+Qual seria a resposta esperada?
+
+A resposta seria 0000
