@@ -5,3 +5,4 @@ Em que intervalo de tempo está ocorrendo o erro?
 Qual seria a resposta esperada?
 
 A resposta seria 0000
+

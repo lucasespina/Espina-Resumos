@@ -1,6 +1,0 @@
-Explique a função realizada pelo circuito.
-Este circuito realiza conversões entre códigos binários de 2 bits e códigos Gray de 2 bits. 
-A conversão (BCD para Gray ou Gray para BCD) depende do sinal "Up". 
-Quando é '0', ocorre a conversão de BCD para Gray, e quando é '1', 
-ocorre a conversão de Gray para BCD. O resultado da conversão é representado na saída "Gray".
-
