@@ -1,3 +1,0 @@
-Qual a vantagem em se evitar a propagação do carry entre os Full-Adders?
-Eliminar a propagação do carry em Full-Adders acelera a operação de circuitos. Isso acontece porque, em somadores com propagação de carry, 
-cada etapa depende da anterior, causando atrasos. Com a eliminação disso, os cálculos podem ocorrer simultaneamente em cada etapa. 
