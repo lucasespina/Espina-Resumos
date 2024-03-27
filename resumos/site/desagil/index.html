@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+      
+        <title>DesÁgil - Resumos - Lucas Espina</title>
+      
+    
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:700|Oxygen+Mono|Source+Sans+Pro:700|Source+Serif+Pro&amp;display=swap">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <script>
+      // SETUP GLOBAL CONSTANTS
+      var base_url = '..';
+      
+      var telemetryEnabled = false;
+      var backendUrl = "";
+      var courseSlug = "";
+      
+      
+      var dashboardEnabled = false;
+      var tagTree = {};
+      
+
+      // SETUP PLUGIN
+      window.initialized = false;
+      if (!window.initializers) window.initializers = [];
+      window.registerInitializer = (initialize) => {
+        if (window.initialized) initialize();
+        else window.initializers.push(initialize);
+      };
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://unpkg.com/hyperscript.org"></script>
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    
+    <link rel="stylesheet" href="../css/ansi-colours.css"><link rel="stylesheet" href="../css/jupyter-cells.css"><link rel="stylesheet" href="../css/pandas-dataframe.css">
+  </head>
+  <body>
+    <div class="ah-main-container">
+      <header class="ah-header">
+        <button class="ah-menu-btn ah-button ah-button--borderless"
+                aria-label="toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+</svg>
+        </button>
+        <a href=".."
+           title="Resumos - Lucas Espina"
+           class="ah-logo"
+           aria-label="Resumos - Lucas Espina">
+          Resumos - Lucas Espina
+        </a>
+        <div class="ah-header--right">
+          
+          
+          
+          <button id="resetHandoutButton">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+</svg></span>
+          </button>
+          
+
+          
+        </div>
+      </header>
+      <nav class="ah-navigation preload">
+        <div class="ah-nav-container">
+          <button class="ah-menu-btn ah-button ah-button--borderless close-menu"
+                  aria-label="close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/>
+</svg>
+          </button>
+          <ul class="ah-nav-body">
+            
+              
+  
+    <li>
+      <a href="..">Home</a>
+    </li>
+  
+
+            
+              
+  <li class="ah-togglable-item opened">
+    <span class="ah-togglable-handle">Resumos</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">RobComp</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Ros2</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../robcomp/#ros2">Ros2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#executando-o-ros2">Executando o ROS2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#executando-o-teleop">Executando o Teleop</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#executando-o-rqt_image_view">Executando o rqt_image_view</a>
+    </li>
+  
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Tópicos e Mensagens</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../robcomp/#listar-os-topicos">Listar os Tópicos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#listar-o-tipo-de-mensagem">Listar o Tipo de Mensagem</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#visualizar-mensagens">Visualizar Mensagens</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#visualizando-a-estrutura-das-mensagens">Visualizando a Estrutura das Mensagens</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#criar-um-novo-pacote">Criar um Novo Pacote</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#compilar-pacote">Compilar Pacote</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#maquina-de-estados">Máquina de Estados</a>
+    </li>
+  
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Arquivos de Base</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../robcomp/#arquivos-de-base">Arquivos de Base</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#no-base">Nó Base</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#no-base-de-controle">Nó Base de Controle</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">OpenCV2</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../robcomp/#opencv2">OpenCV2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#ler-a-imagem">Ler a Imagem</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#mostrar-a-imagem-na-tela">Mostrar a imagem na tela</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#imagens-como-matrizes">Imagens como matrizes</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#conversao-de-cores">Conversão de cores</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#copiar-uma-imagem">Copiar uma imagem</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#criar-uma-imagem-vazia">Criar uma imagem vazia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#cortar-uma-imagem">Cortar uma imagem</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#minimo-maximo-media-etc">Mínimo, Máximo, Média, etc</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#operacoes-condicionais">Operações Condicionais</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#area">Área</a>
+    </li>
+  
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Máscaras</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../robcomp/#mascaras">Máscaras</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#calcular-a-area-da-mascara">Calcular a área da máscara</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#mascara-de-imagens-em-preto-e-branco">Máscara de imagens em preto e branco</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#mascara-de-imagens-coloridas">Máscara de imagens coloridas</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Indentificação de Obejtos</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../robcomp/#filtrando-o-objeto">Filtrando o Objeto</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Contornos</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../robcomp/#contornos">Contornos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#desenhar-contornos">Desenhar Contornos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#medidas-dos-contornos">Medidas Dos Contornos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#maior-contorno">Maior Contorno</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#desenhando-o-maior-contorno">Desenhando o Maior Contorno</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#centro-de-massa-do-maior-contorno">Centro de Massa do Maior Contorno</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#caixa-delimitadora">Caixa Delimitadora</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#ferramenta-de-imagem">Ferramenta de Imagem</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../robcomp/#funcoes-extras">Funções Extras</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+        
+  
+    <li class="active ah-togglable-item opened">
+      <span class="ah-togglable-handle">DesÁgil</span>
+      <ul>
+        
+      </ul>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../elesis/">Elesis</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  
+    <li>
+      <a href="../sobre/">Sobre</a>
+    </li>
+  
+
+            
+          </ul>
+        </div>
+      </nav>
+      <main class="ah-content ah-typeset">
+        
+          <div class="ah-title-box">
+            <ul class="ah-breadcrumbs">
+              
+                
+                  
+                    <li>Resumos</li>
+                  
+                
+                <li>DesÁgil</li>
+            </ul>
+            
+            
+          </div>
+          
+            <section class="progress-section show">
+
+
+</section>
+          
+        
+      </main>
+      <footer class="ah-footer ah-typeset">
+        <div class="ah-footer-nav">
+          
+            <a href=".."
+               class="ah-prev"
+               title="Home">
+              <span class="nav-label">Anterior</span>
+              <span class="nav-title">Home</span>
+            </a>
+          
+          
+            <a href="../elesis/"
+               class="ah-next"
+               title="Elesis">
+              <span class="nav-label">Próximo</span>
+              <span class="nav-title">Elesis</span>
+            </a>
+          
+        </div>
+      </footer>
+    </div>
+    
+      
+    
+  </body>
+</html>
