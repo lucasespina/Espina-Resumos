@@ -1,0 +1,94 @@
+site_name: Resumos - Lucas Espina
+theme:
+  name: active-handout-theme
+  locale: pt_BR
+
+markdown_extensions:
+  - toc:
+      toc_depth: 0
+  - markdown.extensions.admonition
+  - meta
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path: "content/"
+  - pymdownx.superfences
+  - pymdownx.magiclink
+  - pymdownx.critic:
+      mode: view
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.smartsymbols
+  - attr_list
+  - pymdownx.arithmatex:
+      generic: true
+
+plugins:
+    - active-handout
+    - mknotebooks
+
+nav:
+    - index.md
+    - Resumos:
+        - RobComp:
+            - Ros2:
+                    - "Ros2": robcomp/#ros2
+                    - "Executando o ROS2": robcomp/#executando-o-ros2
+                    - "Executando o Teleop": robcomp/#executando-o-teleop
+                    - "Executando o rqt_image_view": robcomp/#executando-o-rqt_image_view
+                    - "Tópicos e Mensagens": 
+                        - "Listar os Tópicos": robcomp/#listar-os-topicos
+                        - "Listar o Tipo de Mensagem": robcomp/#listar-o-tipo-de-mensagem
+                        - "Visualizar Mensagens": robcomp/#visualizar-mensagens
+                        - "Visualizando a Estrutura das Mensagens": robcomp/#visualizando-a-estrutura-das-mensagens
+                    - "Criar um Novo Pacote": robcomp/#criar-um-novo-pacote
+                    - "Compilar Pacote": robcomp/#compilar-pacote
+                    - "Máquina de Estados": robcomp/#maquina-de-estados
+                    - "Arquivos de Base": 
+                        - "Arquivos de Base": robcomp/#arquivos-de-base
+                        - "Nó Base": robcomp/#no-base
+                        - "Nó Base de Controle": robcomp/#no-base-de-controle
+            - OpenCV2:
+                - "OpenCV2": robcomp/#opencv2
+                - "Ler a Imagem": robcomp/#ler-a-imagem
+                - "Mostrar a imagem na tela": robcomp/#mostrar-a-imagem-na-tela
+                - "Imagens como matrizes": robcomp/#imagens-como-matrizes
+                - "Conversão de cores": robcomp/#conversao-de-cores
+                - "Copiar uma imagem": robcomp/#copiar-uma-imagem
+                - "Criar uma imagem vazia": robcomp/#criar-uma-imagem-vazia
+                - "Cortar uma imagem": robcomp/#cortar-uma-imagem
+                - "Mínimo, Máximo, Média, etc": robcomp/#minimo-maximo-media-etc
+                - "Operações Condicionais": robcomp/#operacoes-condicionais
+                - "Área": robcomp/#area
+                - Máscaras: 
+                    - "Máscaras": robcomp/#mascaras
+                    - "Calcular a área da máscara": robcomp/#calcular-a-area-da-mascara
+                    - "Máscara de imagens em preto e branco": robcomp/#mascara-de-imagens-em-preto-e-branco
+                    - "Máscara de imagens coloridas": robcomp/#mascara-de-imagens-coloridas
+                - "Indentificação de Obejtos": 
+                    - "Filtrando o Objeto": robcomp/#filtrando-o-objeto
+                - Contornos: 
+                    - "Contornos": robcomp/#contornos
+                    - "Desenhar Contornos": robcomp/#desenhar-contornos
+                    - "Medidas Dos Contornos": robcomp/#medidas-dos-contornos
+                    - "Maior Contorno": robcomp/#maior-contorno
+                    - "Desenhando o Maior Contorno": robcomp/#desenhando-o-maior-contorno
+                    - "Centro de Massa do Maior Contorno": robcomp/#centro-de-massa-do-maior-contorno
+                    - "Caixa Delimitadora": robcomp/#caixa-delimitadora
+                - "Ferramenta de Imagem": robcomp/#ferramenta-de-imagem
+                - "Funções Extras": robcomp/#funcoes-extras
+
+
+
+        - "DesÁgil": desagil.md
+        - "Elesis": elesis.md
+    - "Sobre": sobre.md
+
