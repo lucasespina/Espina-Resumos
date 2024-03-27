@@ -1,6 +1,0 @@
-<testsuites name="results">
-  <testsuite name="all" package="all">
-    <property name="random_seed" value="1696594672" />
-    <testcase name="tb_add4" classname="av2_cocotb" file="/home/borg/av2-ai-GabrielBuhrer/av2_cocotb.py" lineno="37" time="0.0031447410583496094" sim_time_ns="16.000001" ratio_time="5087.859605330099" />
-  </testsuite>
-</testsuites>

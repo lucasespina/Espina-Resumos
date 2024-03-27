@@ -1,7 +1,0 @@
-Explique a função realizada pelo circuito.
-
-O circuito realiza o seguinte: 
-uma operação XOR entre os 8 bits mais significativos e os 8 bits menos significativos do vetor de entrada "a". 
-O resultado dessa operação é colocado nos 8 bits menos significativos da saída "q", enquanto os 8 bits mais significativos da saída "q" 
-são sempre zeros. Assim, a saída "q" representa uma variante alterada do vetor de entrada "a", em que os bits mais significativos são 
-sempre zeros, e os bits menos significativos refletem o resultado da operação XOR.
