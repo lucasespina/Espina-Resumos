@@ -1,7 +1,0 @@
-v 4
-file / "/home/borg/av2-ai-GabrielBuhrer/src/circuito.vhd" "44563c7dfc9144f05c8884789e7912d3347a063b" "20231006121757.370":
-  entity circuito at 1( 0) + 0 on 11;
-  architecture rtl of circuito at 12( 181) + 0 on 12;
-file / "/home/borg/av2-ai-GabrielBuhrer/src/flipflopd.vhd" "75d6f361679d091a93a3614036233fa2c360629a" "20231006121757.370":
-  entity flipflopd at 5( 64) + 0 on 13;
-  architecture arch of flipflopd at 18( 279) + 0 on 14;

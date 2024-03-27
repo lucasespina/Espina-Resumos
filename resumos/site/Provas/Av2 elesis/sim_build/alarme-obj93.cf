@@ -1,4 +1,0 @@
-v 4
-file / "/home/borg/av2-ai-GabrielBuhrer/src/alarme.vhd" "c54bd8ea0d738a4871d2e0a2af26bace269f74b5" "20231006121746.420":
-  entity alarme at 1( 0) + 0 on 11;
-  architecture rtl of alarme at 11( 155) + 0 on 12;
