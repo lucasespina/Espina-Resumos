@@ -6,31 +6,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://lucasespina.github.io/Espina-Resumos/desagil/</loc>
-         <lastmod>2024-05-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://lucasespina.github.io/Espina-Resumos/elesis/</loc>
-         <lastmod>2024-05-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://lucasespina.github.io/Espina-Resumos/robcomp/</loc>
-         <lastmod>2024-05-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://lucasespina.github.io/Espina-Resumos/sobre/</loc>
-         <lastmod>2024-05-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://lucasespina.github.io/Espina-Resumos/test/</loc>
-         <lastmod>2024-05-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://lucasespina.github.io/Espina-Resumos/arquivos-de-base/base/</loc>
          <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
@@ -47,6 +22,21 @@
     </url>
     <url>
          <loc>https://lucasespina.github.io/Espina-Resumos/arquivos-de-base/remover_borda/</loc>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lucasespina.github.io/Espina-Resumos/pages/desagil/</loc>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lucasespina.github.io/Espina-Resumos/pages/robcomp/</loc>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lucasespina.github.io/Espina-Resumos/pages/sobre/</loc>
          <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
