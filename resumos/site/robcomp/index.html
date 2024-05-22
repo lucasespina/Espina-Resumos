@@ -887,7 +887,7 @@ Podemos criar uma máscara com a função <code>cv2.inRange</code> que define os
 <p>Para o caso de imagens preto e branco, a função <code>cv2.inRange</code> recebe como parâmetros a imagem de entrada, o <strong>valor mínimo</strong> e o <strong>valor máximo</strong> do intervalo de valores que serão considerados para a limiarização. </p>
 <p>O resultado da função é uma imagem binária, onde os pixels que estão dentro do intervalo são brancos e os pixels que estão fora do intervalo são pretos.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Lendo a imagem</span>
-<span class="n">img_gray</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
+<span class="n">img_gray</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;path/exemplo.png&quot;</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">IMREAD_GRAYSCALE</span><span class="p">)</span>
 
 <span class="c1"># Criando a máscara </span>
 <span class="n">mask</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">inRange</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
@@ -1018,7 +1018,7 @@ O canal <strong>Value</strong> indica a luminosidade da cor.</p>
 - <strong>Caixa delimitadora:</strong> menor retângulo que contém o contorno, calculada com <code>cv2.boundingRect(contour)</code></p>
 <h1 id="_40"></h1>
 <h3 id="maior-contorno">Maior Contorno</h3>
-<p>Utilizando a função <code>cv2.contourArea()</code> podemos calcular a área de cada contorno e assim encontrar o maior contorno.
+<p>Utilizando a função <code>cv2.contourArea()</code> podemos calcular a área de cada contorno e assim encontrar o maior contorno.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Lendo a imagem</span>
 <span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;path/exemplo.png&quot;</span><span class="p">)</span>
 
@@ -1027,7 +1027,7 @@ O canal <strong>Value</strong> indica a luminosidade da cor.</p>
 
 <span class="c1"># Encontrando o maior contorno</span>
 <span class="n">maior_contorno</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">contours</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">cv2</span><span class="o">.</span><span class="n">contourArea</span><span class="p">)</span>
-</code></pre></div></p>
+</code></pre></div>
 <h1 id="_41"></h1>
 <h3 id="desenhando-o-maior-contorno">Desenhando o Maior Contorno</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Desenhando o maior contorno</span>
