@@ -6,22 +6,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://lucasespina.github.io/Espina-Resumos/arquivos-de-base/base/</loc>
-         <lastmod>2024-05-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://lucasespina.github.io/Espina-Resumos/arquivos-de-base/base_control/</loc>
-         <lastmod>2024-05-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://lucasespina.github.io/Espina-Resumos/arquivos-de-base/desenhar_crosshair/</loc>
          <lastmod>2024-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://lucasespina.github.io/Espina-Resumos/arquivos-de-base/remover_borda/</loc>
+         <lastmod>2024-05-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lucasespina.github.io/Espina-Resumos/pages/base/</loc>
+         <lastmod>2024-05-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lucasespina.github.io/Espina-Resumos/pages/base_control/</loc>
          <lastmod>2024-05-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
