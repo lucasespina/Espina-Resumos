@@ -531,6 +531,148 @@
           </div>
           
             <section class="progress-section show">
+<h1 id="resumo-desagil">Resumo DesÁgil</h1>
+<hr />
+<h2 id="sumario">Sumário</h2>
+<hr />
+<h2 id="operadores-ifelse-while-e-for">Operadores, If/Else, While e For</h2>
+<p>Os operadores em Java e Python são muito parecidos, mas existem algumas diferenças.</p>
+<h3 id="operadores-basicos">Operadores básicos</h3>
+<p>Os operadores de atribuição e os operadores aritméticos são praticamente iguais em Python e Java. As únicas exceções são o operador de <code>divisão</code> e o operador de <code>potência</code></p>
+<p><img alt="Operadores" src="../../image/operadores1.png" />
+<img alt="Operadores" src="../../image/operadores2.png" /></p>
+<h1 id="_1"></h1>
+<p>Os operadores de comparação são totalmente iguais.</p>
+<p><img alt="Operadores" src="../../image/operadores3.png" /></p>
+<p>Por outro lado, os operadores lógicos são totalmente diferentes.</p>
+<p><img alt="Operadores" src="../../image/operadores4.png" /></p>
+<h3 id="operadores-de-incremento-e-decremento">Operadores de incremento e decremento</h3>
+<p><img alt="Operadores" src="../../image/operadores5.png" /></p>
+<h3 id="ifelse">If/Else</h3>
+<p>Em Java, a condição das instruções if e else deve estar entre parênteses, e o escopo das instruções deve ser delimitado por chaves, sem usar dois pontos ao final da condição.</p>
+<p><img alt="ifelse" src="../../image/ifelse.png" /></p>
+<h3 id="while">While</h3>
+<p>O while deve estar entre parênteses e seu escopo deve estar entre as chaves <code>{</code>e <code>}</code>. Além disso, a condição não pode terminar com dois pontos. </p>
+<p><img alt="while" src="../../image/while.png" /></p>
+<h3 id="for">For</h3>
+<p>A instrução <code>for</code> pode ser usada de duas formas em Java. A primeira, diferente de Python, é uma versão alternativa do <code>while</code>. Dentro dos parênteses, ela tem três elementos separados por ponto e vírgula: inicialização, condição e passo.</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">inicializacao</span><span class="p">;</span><span class="w"> </span><span class="n">condicao</span><span class="p">;</span><span class="w"> </span><span class="n">passo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* Algum código. */</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>A inicialização é uma linha de código que deve ser executada imediatamente antes da primeira iteração, a condição é análoga à condição de um while e o passo é uma linha de código que deve ser executada no final de cada iteração.</p>
+<p>Essa estrutura é perfeita para laços de contador. Por exemplo, o código</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* Algum código que pode usar i. */</span>
+<span class="p">}</span>
+</code></pre></div>
+é equivalente ao código</p>
+<div class="highlight"><pre><span></span><code><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// inicialização</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// condição</span>
+<span class="w">    </span><span class="cm">/* Algum código que pode usar i. */</span>
+<span class="w">    </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// passo</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>mas o primeiro é significativamente mais limpo.</p>
+<h2 id="divisao-exata-de-inteiros">Divisão Exata de Inteiros</h2>
+<p>Em Java operador de divisão <code>/</code> retorna um inteiro</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">  </span><span class="c1">// c é 2.0 (após conversão automática)</span>
+</code></pre></div>
+<p>Para evitar isso, você pode converter um dos operandos para <code>double</code>:</p>
+<p><div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">  </span><span class="c1">// c é 2.5</span>
+</code></pre></div>
+ou</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">  </span><span class="c1">// c é 2.5</span>
+</code></pre></div>
+<h2 id="conversao-de-tipos">Conversão de Tipos</h2>
+<h3 id="de-string-para-outros-tipos">De String para Outros Tipos</h3>
+<ul>
+<li><strong>Boolean:</strong> <code>boolean b = Boolean.parseBoolean(s);</code></li>
+<li><strong>Int:</strong> <code>int i = Integer.parseInt(s);</code></li>
+<li><strong>Double:</strong> <code>double d = Double.parseDouble(s);</code></li>
+</ul>
+<h3 id="de-outros-tipos-para-string">De Outros Tipos para String</h3>
+<ul>
+<li><strong>Boolean:</strong> <code>String s = Boolean.toString(b);</code></li>
+<li><strong>Int:</strong> <code>String s = Integer.toString(i);</code></li>
+<li><strong>Double:</strong> <code>String s = Double.toString(d);</code></li>
+</ul>
+<h3 id="aritmetica-e-strings">Aritmética e Strings</h3>
+<p>Em Java, não há multiplicação de strings, mas a soma de strings é mais poderosa que em Python devido à conversão automática de tipos:
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Atribuí o valor &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; à variável i.&quot;</span><span class="p">;</span>
+</code></pre></div></p>
+<p>podemos usar simplesmente o código abaixo.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+
+<span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Atribuí o valor &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; à variável i.&quot;</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="verificar-o-comprimento-de-uma-string">Verificar o comprimento de uma String</h3>
+<p>Para verificar o comprimento de uma string, você pode usar o método s.isEmpty()</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+</code></pre></div>
+<p>Para obter o comprimento de uma string, você pode usar o método s.length()</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="acessar-caractere-por-indice">Acessar caractere por índice</h3>
+<p>Para acessar o caractere de índice i de uma string s, você pode usar a expressão s.charAt(i)</p>
+<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="iterar-sobre-os-caracteres-de-uma-string">Iterar sobre os caracteres de uma string</h3>
+<p>Para iterar sobre os caracteres de uma string s, você pode usar um loop for</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">    </span><span class="cm">/* Algum código que pode usar c. */</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="listas">Listas</h2>
+<p>Em Java, as listas são objetos da classe <code>ArrayList</code>. Para criar uma lista vazia, você pode usar a seguinte linha de código:</p>
+<p><img alt="listas" src="../../image/listas.png" /></p>
+<p>Por outro lado, depois de construída, a lista pode ser manipulada de forma análoga a Python. Nas tabelas abaixo, substitua TE pelo tipo dos elementos, ou seja:</p>
+<ul>
+<li>para <code>List&lt;Boolean&gt;</code>, substitua <code>TE</code> por <code>boolean</code>;</li>
+<li>para <code>List&lt;Integer&gt;</code>, substitua <code>TE</code> por <code>int</code>;</li>
+<li>para <code>List&lt;Double&gt;</code>, substitua <code>TE</code> por <code>double</code>;</li>
+<li>para <code>List&lt;String&gt;</code>, substitua <code>TE</code> por <code>String</code>.</li>
+<li>para <code>List&lt;Character&gt;</code> , substitua <code>TE</code> por <code>char</code>.</li>
+</ul>
+<h1 id="_2"></h1>
+<p><img alt="manipulacao" src="../../image/manilistas.png" /></p>
+<p>Para iterar sobre uma lista, a instrução f<code>or</code> pode ser usada de duas formas: como uma versão alternativa do <code>while</code>, ou como em Python. No segundo caso, é necessário especificar o tipo da variável e usar dois pontos em vez de <code>in.</code></p>
+<p><img alt="iterar" src="../../image/interarlistas.png" /></p>
+<p>Para criar uma lista de inteiros, você pode usar a seguinte linha de código:</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</code></pre></div>
+ou 
+<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">l</span><span class="p">;</span>
+<span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</code></pre></div></p>
+<h2 id="dicionarios">Dicionários</h2>
+<p>Em Java, um dicionário tem três tipos: o tipo Map, o tipo das chaves e o tipo dos valores. Os dois últimos são especificados entre menor (&lt;) e maior (&gt;) e separados por vírgula.</p>
+<p>Isso significa que todas as chaves de um dicionário devem ser do mesmo tipo e todos os valores de um dicionário devem ser do mesmo tipo.</p>
+<p><img alt="dicionarios" src="../../image/dict.png" /></p>
+<p>Por outro lado, depois de construído, o dicionário pode ser manipulado de forma análoga a Python. Nas tabelas abaixo, substitua TK pelo tipo das chaves e substitua TV pelo tipo dos valores, ou seja:</p>
+<ul>
+<li>para <code>Map&lt;Integer, Boolean&gt;</code> , substitua <code>TK</code> por <code>int</code> e <code>TV</code> por <code>boolean</code>;</li>
+<li>para <code>Map&lt;Integer, Double&gt;</code>, substitua <code>TK</code> por <code>int</code> e <code>TV</code> por <code>double</code>;</li>
+<li>para <code>Map&lt;String Double&gt;</code> , substitua <code>TK</code> por <code>String</code> e <code>TV</code> por <code>double</code>;</li>
+</ul>
+<p><img alt="manipulacao" src="../../image/manidict.png" /></p>
+<p>Para iterar sobre um dicionário, a instrução <code>for</code> pode ser usada de duas formas: como uma versão alternativa do <code>while</code>, ou como em Python. No segundo caso, é necessário especificar o tipo das chaves e dos valores e usar dois pontos em vez de <code>in</code>.</p>
+<p><img alt="iterar" src="../../image/intdic.png" /></p>
+<p>Para criar um dicionário de inteiros e double, você pode usar a seguinte linha de código:</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">Map</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span><span class="w"> </span><span class="n">Double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dicionario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</code></pre></div>
+ou
+<div class="highlight"><pre><span></span><code><span class="n">Map</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span><span class="w"> </span><span class="n">Double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
+<span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</code></pre></div></p>
 
 
 </section>
